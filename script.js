@@ -1,366 +1,284 @@
-// active hamburger menu 
+// =============================================
+// Particle Canvas Background
+// =============================================
+(function() {
+    const canvas = document.getElementById('particle-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let animId;
+
+    function resize() {
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    function randomBetween(a, b) { return a + Math.random() * (b - a); }
+
+    const COLORS = ['#8b5cf6', '#06b6d4', '#ec4899', '#a78bfa', '#22d3ee'];
+
+    class Particle {
+        constructor() { this.reset(); }
+        reset() {
+            this.x = randomBetween(0, canvas.width);
+            this.y = randomBetween(0, canvas.height);
+            this.r = randomBetween(0.8, 2.5);
+            this.vx = randomBetween(-0.25, 0.25);
+            this.vy = randomBetween(-0.35, -0.1);
+            this.alpha = randomBetween(0.3, 0.8);
+            this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+        }
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            this.alpha -= 0.001;
+            if (this.alpha <= 0 || this.y < -10) this.reset();
+        }
+        draw() {
+            ctx.save();
+            ctx.globalAlpha = this.alpha;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+            ctx.restore();
+        }
+    }
+
+    for (let i = 0; i < 90; i++) particles.push(new Particle());
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => { p.update(); p.draw(); });
+        animId = requestAnimationFrame(animate);
+    }
+    animate();
+})();
+
+// =============================================
+// Header scroll effect
+// =============================================
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// =============================================
+// Hamburger Menu
+// =============================================
 let menuIcon = document.querySelector(".menu-icon");
-let navlist = document.querySelector(".navlist")
-menuIcon.addEventListener("click",()=>{
+let navlist  = document.querySelector(".navlist");
+
+menuIcon.addEventListener("click", () => {
     menuIcon.classList.toggle("active");
     navlist.classList.toggle("active");
     document.body.classList.toggle("open");
 });
 
-// remove navlist
-navlist.addEventListener("click",()=>{
+navlist.addEventListener("click", () => {
     navlist.classList.remove("active");
     menuIcon.classList.remove("active");
     document.body.classList.remove("open");
-})
+});
 
-// rotate text js code 
-let text = document.querySelector(".text p");
+// =============================================
+// Rotate Text (hero)
+// =============================================
+let textEl = document.querySelector(".text p");
+if (textEl) {
+    textEl.innerHTML = textEl.innerHTML.split("").map((char, i) =>
+        `<b style="transform:rotate(${i * 6.3}deg)">${char}</b>`
+    ).join("");
+}
 
-text.innerHTML = text.innerHTML.split("").map((char,i)=>
-    `<b style="transform:rotate(${i * 6.3}deg")>${char}</b>`
-).join("");
-
-// switch between about buttons 
-
-const buttons = document.querySelectorAll('.about-btn button');
+// =============================================
+// About Tab Switching
+// =============================================
+const buttons  = document.querySelectorAll('.about-btn button');
 const contents = document.querySelectorAll('.content');
 
 buttons.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    contents.forEach(content => content.style.display = 'none');
-    contents[index].style.display = 'block';
-    buttons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
-  });
-});
-
-// Fetch GitHub repositories count
-function fetchGitHubStats() {
-    // This function would ideally fetch live data from GitHub API
-    // For now, we'll use placeholder data that's updated manually
-    console.log("GitHub stats would be fetched here");
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    fetchGitHubStats();
-});
-
-// portfolio fillter 
-
-var mixer = mixitup('.portfolio-gallery',{
-    selectors: {
-        target: '.portfolio-box'
-    },
-    animation: {
-        duration: 500
-    }
-});
-
-// Initialize swiperjs 
-
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    autoplay:{
-        delay:3000,
-        disableOnInteraction:false,
-    },
-
-    breakpoints: {
-        576:{
-            slidesPerView:2,
-            spaceBetween:10,
-        },
-        1200:{
-            slidesPerView:3,
-            spaceBetween:20,
-        },
-    }
-  });
-
-//   skill Progress bar 
-
-const first_skill = document.querySelector(".skill:first-child");
-const sk_counters = document.querySelectorAll(".counter span");
-const progress_bars = document.querySelectorAll(".skills svg circle");
-
-window.addEventListener("scroll",()=>{
-    if(!skillsPlayed)
-    skillsCounter();
-})
-
-function hasReached(el){
-    let topPosition = el.getBoundingClientRect().top;
-    if(window.innerHeight >= topPosition + el.offsetHeight)return true;
-    return false;
-}
-
-function updateCount(num,maxNum){
-    let currentNum = +num.innerText;
-    
-    if(currentNum < maxNum){
-        num.innerText = currentNum + 1;
-        setTimeout(()=>{
-            updateCount(num,maxNum)
-        },12)
-    }
-}
-
-let skillsPlayed = false;
-
-function skillsCounter(){
-    if(!hasReached(first_skill))return;
-    skillsPlayed = true;
-    sk_counters.forEach((counter,i)=>{
-        let target = +counter.dataset.target;
-        let strokeValue = 465 - 465 * (target / 100);
-
-        progress_bars[i].style.setProperty("--target",strokeValue);
-
-        setTimeout(()=>{
-            updateCount(counter,target);
-        },400)
+    button.addEventListener('click', () => {
+        contents.forEach(c => c.style.display = 'none');
+        contents[index].style.display = 'block';
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
     });
+});
 
-    progress_bars.forEach(p => p.style.animation = "progress 2s ease-in-out forwards");
+// =============================================
+// Portfolio Filter (MixItUp)
+// =============================================
+var mixer = mixitup('.portfolio-gallery', {
+    selectors: { target: '.portfolio-box' },
+    animation: { duration: 450, easing: 'cubic-bezier(0.4,0,0.2,1)' }
+});
+
+// =============================================
+// Swiper (testimonials — keep for backward compat)
+// =============================================
+if (document.querySelector('.mySwiper')) {
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: { el: ".swiper-pagination", clickable: true },
+        autoplay: { delay: 3000, disableOnInteraction: false },
+        breakpoints: {
+            576:  { slidesPerView: 2, spaceBetween: 10  },
+            1200: { slidesPerView: 3, spaceBetween: 20  },
+        }
+    });
 }
 
-// side progress bar 
-
-let calcScrollValue = ()=>{
+// =============================================
+// Scroll-to-Top Progress Ring
+// =============================================
+let calcScrollValue = () => {
     let scrollProgress = document.getElementById("progress");
-    let pos = document.documentElement.scrollTop;
+    let pos         = document.documentElement.scrollTop;
+    let calcHeight  = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollValue = Math.round((pos * 100) / calcHeight);
 
-    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrollValue = Math.round((pos * 100)/calcHeight);
-    
-    if(pos > 100){
-        scrollProgress.style.display = "grid";
-    }else{
-        scrollProgress.style.display = "none";
-    }
+    scrollProgress.style.display = pos > 100 ? "grid" : "none";
 
-    scrollProgress.addEventListener("click",()=>{
+    scrollProgress.addEventListener("click", () => {
         document.documentElement.scrollTop = 0;
     });
 
-    scrollProgress.style.background = `conic-gradient(#fff ${scrollValue}%,#e6006d ${scrollValue}%)`;
+    scrollProgress.style.background =
+        `conic-gradient(var(--accent-primary) ${scrollValue}%, rgba(139,92,246,0.15) ${scrollValue}%)`;
 };
 
 window.onscroll = calcScrollValue;
-window.onload = calcScrollValue;
+window.onload   = calcScrollValue;
 
-// active menu 
-
-let menuLi = document.querySelectorAll("header ul li a");
+// =============================================
+// Active Nav Link on Scroll
+// =============================================
+let menuLi  = document.querySelectorAll("header ul li a");
 let section = document.querySelectorAll('section');
 
-function activeMenu(){
+function activeMenu() {
     let len = section.length;
-    while(--len && window.scrollY + 97 < section[len].offsetTop){}
+    while (--len && window.scrollY + 97 < section[len].offsetTop) {}
     menuLi.forEach(sec => sec.classList.remove("active"));
-    menuLi[len].classList.add("active");
+    if (menuLi[len]) menuLi[len].classList.add("active");
 }
 activeMenu();
-window.addEventListener("scroll",activeMenu);
+window.addEventListener("scroll", activeMenu);
 
-// scroll reveal
-
-ScrollReveal({ 
-    distance:"90px",
-    duration:2000,
-    delay:200,
-    // reset: true ,
+// =============================================
+// Scroll Reveal
+// =============================================
+ScrollReveal({
+    distance:  "60px",
+    duration:  1000,
+    delay:     150,
+    easing:    'cubic-bezier(0.4, 0, 0.2, 1)',
 });
 
-ScrollReveal().reveal('.hero-info,.main-text,.proposal,.heading', { origin: "top" });
-ScrollReveal().reveal('.about-img,.fillter-buttons,.contact-info', { origin: "left" });
-ScrollReveal().reveal('.about-content,.skills,.tech-stack', { origin: "right" });
-ScrollReveal().reveal('.allServices,.portfolio-gallery,.blog-box,footer,.img-hero,.tech-categories', { origin: "bottom" });
+ScrollReveal().reveal('.hero-info, .main-text, .proposal, .heading', { origin: "top" });
+ScrollReveal().reveal('.about-img, .fillter-buttons, .contact-info', { origin: "left" });
+ScrollReveal().reveal('.about-content, .tech-stack', { origin: "right" });
+ScrollReveal().reveal('.allServices, .portfolio-gallery, footer, .img-hero, .tech-categories, .awards-container, .contact-container', { origin: "bottom" });
 
-// AI Chatbot functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const chatToggle = document.querySelector('.chat-bot-toggle');
-    const chatBox = document.querySelector('.chat-box');
-    const closeChat = document.getElementById('close-chat');
-    const sendButton = document.getElementById('send-message');
-    const userInput = document.getElementById('user-message');
-    const chatMessages = document.querySelector('.chat-messages');
+// =============================================
+// Hero Typing Animation
+// =============================================
+const typingText = document.querySelector(".typing-text");
+if (typingText) {
+    const roles = [
+        "Associate Software Engineer",
+        "Full Stack Developer",
+        "UI/UX Designer",
+        "Open Source Contributor"
+    ];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed  = 100;
 
-    // Toggle chat box with animation
-    chatToggle.addEventListener('click', () => {
-        chatBox.classList.toggle('active');
-        if (chatBox.classList.contains('active')) {
-            // Focus input when chat opens
-            setTimeout(() => userInput.focus(), 300);
-            // Reset chat toggle animation
-            chatToggle.style.animation = 'none';
-            setTimeout(() => chatToggle.style.animation = '', 10);
-        }
-    });
-
-    // Close chat box
-    closeChat.addEventListener('click', () => {
-        chatBox.classList.remove('active');
-    });
-
-    // Send message when button is clicked
-    sendButton.addEventListener('click', sendMessage);
-
-    // Send message when Enter key is pressed
-    userInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            sendMessage();
-        }
-    });
-
-    function sendMessage() {
-        const message = userInput.value.trim();
-        if (message !== '') {
-            // Add user message to chat
-            addMessage(message, 'user');
-            
-            // Clear input field
-            userInput.value = '';
-            
-            // Add typing indicator
-            const typingIndicator = document.createElement('div');
-            typingIndicator.classList.add('message', 'bot', 'typing');
-            typingIndicator.innerHTML = '<p><span class="dot"></span><span class="dot"></span><span class="dot"></span></p>';
-            chatMessages.appendChild(typingIndicator);
-            
-            // Scroll to bottom of chat
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-            
-            // Get bot response after a realistic delay
-            setTimeout(() => {
-                // Remove typing indicator
-                if (typingIndicator.parentNode === chatMessages) {
-                    chatMessages.removeChild(typingIndicator);
-                }
-                
-                const botResponse = getBotResponse(message);
-                addMessage(botResponse, 'bot');
-            }, 1200);
-        }
-    }
-
-    function addMessage(message, sender) {
-        const messageElement = document.createElement('div');
-        messageElement.classList.add('message', sender);
-        messageElement.innerHTML = `<p>${message}</p>`;
-        chatMessages.appendChild(messageElement);
+    function type() {
+        const currentRole = roles[roleIndex];
         
-        // Scroll to bottom of chat
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-
-    function getBotResponse(message) {
-        // Convert message to lowercase for easier comparison
-        const lowerMessage = message.toLowerCase();
-        
-        // Simple response logic
-        if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
-            return "👋 Hello! How can I help you today?";
-        } else if (lowerMessage.includes('who are you') || lowerMessage.includes('your name')) {
-            return "I'm Sakith's AI assistant, here to help answer questions about his work and services.";
-        } else if (lowerMessage.includes('contact') || lowerMessage.includes('reach')) {
-            return "📱 You can contact Sakith via WhatsApp at +94769092755 or email at sakithchanlaka2004@gmail.com";
-        } else if (lowerMessage.includes('service')) {
-            return "🚀 Sakith offers web development, graphic design, UI/UX design, and digital marketing services. Would you like to know more about any specific service?";
-        } else if (lowerMessage.includes('portfolio') || lowerMessage.includes('work') || lowerMessage.includes('project')) {
-            return "💼 Sakith has worked on various projects including VN Sports Dressings, Orbiter Shoes, Rapid Cart Shopping, and more. You can check his portfolio section for details.";
-        } else if (lowerMessage.includes('web') || lowerMessage.includes('website')) {
-            return "💻 Sakith specializes in responsive web design and development. He can create beautiful, functional websites tailored to your needs.";
-        } else if (lowerMessage.includes('graphic') || lowerMessage.includes('design')) {
-            return "🎨 Sakith provides graphic design services including logo design, branding, and packaging design like the New Inland Coffee project.";
-        } else if (lowerMessage.includes('skill')) {
-            return "🔧 Sakith is skilled in HTML (90%), CSS (85%), JavaScript (48%), UI/UX Design (20%), Adobe Photoshop (80%), and Adobe Illustrator (70%).";
-        } else if (lowerMessage.includes('thank')) {
-            return "😊 You're welcome! Feel free to ask if you have any other questions.";
-        } else if (lowerMessage.includes('bye') || lowerMessage.includes('goodbye')) {
-            return "👋 Goodbye! Have a great day!";
+        if (isDeleting) {
+            typingText.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+            typeSpeed = 60;
         } else {
-            return "I'm not sure I understand. Could you please rephrase or ask about Sakith's services, portfolio, or contact information?";
+            typingText.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+            typeSpeed = 120;
         }
+
+        if (!isDeleting && charIndex === currentRole.length) {
+            isDeleting = true;
+            typeSpeed = 2000; // Pause at the end
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            typeSpeed = 500; // Pause start
+        }
+
+        setTimeout(type, typeSpeed);
     }
-});
-
-// Handle missing tech icons
-document.addEventListener('DOMContentLoaded', function() {
-    const techIcons = document.querySelectorAll('.tech-icon i');
     
-    techIcons.forEach(icon => {
-        // Check if the icon is properly loaded
-        if (getComputedStyle(icon, ':before').content === 'normal' || 
-            getComputedStyle(icon).fontSize === '0px') {
-            
-            // Get the data-tooltip value
-            const technology = icon.parentElement.getAttribute('data-tooltip');
-            
-            // Replace with fallback icon
-            icon.classList.add('fallback-icon');
-            
-            // Use first letter as fallback
-            if (technology) {
-                icon.setAttribute('data-letter', technology.charAt(0));
-            } else {
-                icon.setAttribute('data-letter', 'T');
-            }
-        }
-    });
-});
+    // Minimal delay before starting
+    setTimeout(type, 1200);
+}
 
-// Add this CSS for typing animation
-const style = document.createElement('style');
-style.textContent = `
+// =============================================
+// Typing dots animation
+// =============================================
+const dotStyle = document.createElement('style');
+dotStyle.textContent = `
     .typing .dot {
         display: inline-block;
-        width: 8px;
-        height: 8px;
+        width: 7px; height: 7px;
         border-radius: 50%;
-        margin-right: 3px;
-        background: #999;
-        animation: typing 1.5s infinite ease-in-out;
+        margin: 0 2px;
+        background: var(--accent-primary);
+        animation: typingBounce 1.4s infinite ease-in-out;
     }
-    .typing .dot:nth-child(2) {
-        animation-delay: 0.2s;
-    }
-    .typing .dot:nth-child(3) {
-        animation-delay: 0.4s;
-    }
-    @keyframes typing {
+    .typing .dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing .dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes typingBounce {
         0%, 60%, 100% { transform: translateY(0); }
-        30% { transform: translateY(-6px); }
+        30%           { transform: translateY(-8px); }
     }
 `;
-document.head.appendChild(style);
+document.head.appendChild(dotStyle);
 
-// Typing animation for profession
-document.addEventListener('DOMContentLoaded', function() {
-    const professionElement = document.querySelector('.profession');
-    const professionText = document.querySelector('.text-animate h2').textContent;
-    let i = 0;
-    
-    function typeWriter() {
-        if (i < professionText.length) {
-            professionElement.textContent += professionText.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100); // Adjust typing speed here
-        } else {
-            // Optional: Add blinking cursor effect after typing is complete
-            setTimeout(() => {
-                professionElement.classList.add('typing-complete');
-            }, 500);
-        }
-    }
-    
-    // Start typing after a short delay
-    setTimeout(typeWriter, 1000);
+// =============================================
+// Counter animation for stats
+// =============================================
+document.addEventListener('DOMContentLoaded', function () {
+    const statNumbers = document.querySelectorAll('.stat-number');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.dataset.animated) {
+                entry.target.dataset.animated = 'true';
+                const text = entry.target.textContent;
+                const num  = parseInt(text);
+                if (isNaN(num)) return;
+                const suffix = text.replace(/[0-9]/g, '');
+                let current = 0;
+                const step = Math.ceil(num / 50);
+                const interval = setInterval(() => {
+                    current = Math.min(current + step, num);
+                    entry.target.textContent = current + suffix;
+                    if (current >= num) clearInterval(interval);
+                }, 40);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    statNumbers.forEach(el => observer.observe(el));
 });
-

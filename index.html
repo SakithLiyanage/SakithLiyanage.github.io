@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-00BY6LSH6F"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-00BY6LSH6F');
 </script>
 
@@ -30,6 +29,7 @@
     <title>Sakith Liyanage || Portfolio website</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="assistant.css" />
     <!-- boxicon css link -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -46,7 +46,7 @@
     <link rel="canonical" href="https://sakith.axisdatatech.com/" />
     <link rel="alternate" href="https://sakith.axisdatatech.com/" hreflang="en" />
     <!-- Open Graph -->
-    <meta property="og:title" content="Sakith Liyanage — Full Stack Developer" />
+    <meta property="og:title" content="Sakith Liyanage &mdash; Full Stack Developer" />
     <meta property="og:description" content="Explore Sakith Liyanage's personal portfolio, a captivating collection of his remarkable work and talents." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sakith.axisdatatech.com/" />
@@ -54,7 +54,7 @@
     <meta property="og:site_name" content="Sakith Liyanage Portfolio" />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Sakith Liyanage — Full Stack Developer" />
+    <meta name="twitter:title" content="Sakith Liyanage &mdash; Full Stack Developer" />
     <meta name="twitter:description" content="Explore projects, services, and skills from Full Stack Developer Sakith Liyanage." />
     <meta name="twitter:image" content="https://sakith.axisdatatech.com/img/about.png" />
     <!-- Structured Data -->
@@ -71,15 +71,10 @@
           "name": "Sakith Liyanage",
           "url": "https://sakith.axisdatatech.com/",
           "sameAs": [
-            "https://www.linkedin.com/in/sakith-chanlaka-970867237/",
+            "https://www.linkedin.com/in/sakith-chanlaka/",
             "https://github.com/SakithLiyanage",
             "https://www.youtube.com/channel/UCV0CYfi3zsP5MEstI24aPMA"
           ]
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://www.google.com/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
         }
       }
     </script>
@@ -88,39 +83,22 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Sakith Liyanage",
-        "jobTitle": "Full Stack Developer",
+        "jobTitle": "Associate Software Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Data Management Systems (Pvt) Ltd"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Colombo",
+          "addressCountry": "LK"
+        },
         "url": "https://sakith.axisdatatech.com/",
         "image": "https://sakith.axisdatatech.com/img/about.png",
         "sameAs": [
-          "https://www.linkedin.com/in/sakith-chanlaka-970867237/",
+          "https://www.linkedin.com/in/sakith-chanlaka/",
           "https://github.com/SakithLiyanage",
           "https://www.youtube.com/channel/UCV0CYfi3zsP5MEstI24aPMA"
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "Services",
-        "itemListElement": [
-          {"@type": "Service", "name": "Web Development", "description": "Dynamic, responsive websites and robust back-end solutions."},
-          {"@type": "Service", "name": "Graphic Designing", "description": "Brand identities and marketing materials with compelling visuals."},
-          {"@type": "Service", "name": "UI/UX Design", "description": "Intuitive, user-centric interfaces and experiences."},
-          {"@type": "Service", "name": "Digital Marketing", "description": "Data-driven campaigns and social media strategies to grow reach."}
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sakith.axisdatatech.com/#home"},
-          {"@type": "ListItem", "position": 2, "name": "About", "item": "https://sakith.axisdatatech.com/#about"},
-          {"@type": "ListItem", "position": 3, "name": "Services", "item": "https://sakith.axisdatatech.com/#services"},
-          {"@type": "ListItem", "position": 4, "name": "Portfolio", "item": "https://sakith.axisdatatech.com/#portfolio"},
-          {"@type": "ListItem", "position": 5, "name": "Contact", "item": "https://sakith.axisdatatech.com/#contact"}
         ]
       }
     </script>
@@ -128,8 +106,11 @@
   </head>
 
   <body>
+    <!-- Particle Canvas -->
+    <canvas id="particle-canvas"></canvas>
     <div class="overlay"></div>
-    <header>
+
+    <header id="header">
       <a href="#" class="logo"><span>S</span>akith <span>L</span>iyanage</a>
       <ul class="navlist">
         <li><a href="#home" class="active">Home</a></li>
@@ -148,13 +129,17 @@
       </div>
     </header>
 
+    <!-- ==================== HOME ==================== -->
     <section class="home" id="home">
       <div class="hero-info">
-        <h3>Welcome To my World</h3>
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          Associate Software Engineer · Open to opportunities
+        </div>
         <div class="title-container">
-          <h1>Hi I'm Sakith Liyanage</h1>
+          <h1>Hi, I'm <span class="name-accent">Sakith<br>Liyanage</span></h1>
           <div class="text-animate">
-            <h2 style="font-size: 30px">Full Stack Developer</h2>
+            <h2 style="font-size: 30px">And I'm a <span class="typing-text"></span></h2>
           </div>
         </div>
 
@@ -167,7 +152,7 @@
 
         <div class="btn-box">
           <a href="mailto:sakithchanlaka2004@gmail.com" class="btn"
-            >Hire Me Now ! <i class="bx bx-right-arrow-alt"></i
+            >Hire Me Now <i class="bx bx-right-arrow-alt"></i
           ></a>
           <a href="img/resume.pdf" target="_blank" class="btn d-CV"
             >Download CV <i class="bx bx-download"></i
@@ -176,210 +161,216 @@
 
         <div class="social-media">
           <div class="bg-icon">
-            <a href="https://www.linkedin.com/in/sakith-chanlaka-970867237/"
+            <a href="https://www.linkedin.com/in/sakith-chanlaka/" aria-label="LinkedIn"
               ><i class="bx bxl-linkedin"></i
             ></a>
-            <span></span>
           </div>
-
           <div class="bg-icon">
-            <a href="https://github.com/SakithLiyanage"
+            <a href="https://github.com/SakithLiyanage" aria-label="GitHub"
               ><i class="bx bxl-github"></i
             ></a>
-            <span></span>
           </div>
-
           <div class="bg-icon">
-            <a href="https://api.whatsapp.com/send?phone=94769092755"
+            <a href="https://api.whatsapp.com/send?phone=94769092755" aria-label="WhatsApp"
               ><i class="bx bxl-whatsapp"></i
             ></a>
-            <span></span>
           </div>
-
           <div class="bg-icon">
-            <a href="https://www.youtube.com/channel/UCV0CYfi3zsP5MEstI24aPMA"
+            <a href="https://www.youtube.com/channel/UCV0CYfi3zsP5MEstI24aPMA" aria-label="YouTube"
               ><i class="bx bxl-youtube"></i
             ></a>
-            <span></span>
+          </div>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">2+</span>
+            <span class="stat-label">Years Exp</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">20+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">LinkedIn Connects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">400+</span>
+            <span class="stat-label">GitHub Commits</span>
           </div>
         </div>
       </div>
-      <div class="img-hero">
-        <img src="img/itz me.jpg" alt="Portrait of Sakith Liyanage, Full Stack Developer" style="border-radius: 10%" decoding="async" />
 
+      <div class="img-hero">
+        <div class="img-hero-wrapper">
+          <img src="img/itz me.jpg" alt="Portrait of Sakith Liyanage, Full Stack Developer" decoding="async" />
+          <div class="img-hero-ring"></div>
+        </div>
         <div class="rotate-text">
-          <div class="text">
-            <p></p>
-          </div>
+          <div class="text"><p></p></div>
           <span><i></i></span>
         </div>
       </div>
     </section>
 
+    <!-- ==================== ABOUT ==================== -->
     <section class="about" id="about">
-      <div class="about-img">
-        <img src="img/about.png" alt="Illustration representing Sakith Liyanage" class="aboutHero" loading="lazy" decoding="async" />
-        <div class="showcase-ring">
-          <img src="shapes/ring.png" class="ring" alt="" role="presentation" aria-hidden="true" loading="lazy" />
-          <img src="shapes/circle.png" class="circle" alt="" role="presentation" aria-hidden="true" loading="lazy" />
+      <div class="about-inner">
+        <div class="about-img">
+          <div class="about-img-frame">
+            <img src="img/about.png" alt="Sakith Liyanage illustration" class="aboutHero" loading="lazy" decoding="async" />
+          </div>
+          <div class="about-img-decoration"></div>
+          <div class="about-img-decoration2"></div>
         </div>
-      </div>
-      <div class="about-content">
-        <h2 class="heading">About Me</h2>
-        <h3 style="color: aliceblue">
-          Associate Software Engineer | Full Stack Developer
-        </h3>
-        <p>
-          Currently working as an Associate Software Engineer at Data Management Systems - Division 2, I bring a passion for creating end-to-end solutions with expertise in full stack development. My expertise spans from crafting intuitive front-end interfaces to building robust back-end systems. I leverage modern technologies and best practices to deliver scalable and efficient web applications. I'm an active GitHub contributor with several open source projects and collaborations focusing on JavaScript frameworks, API development, and cloud solutions.
-        </p>
-        <div class="github-stats">
-          <a
-            href="https://github.com/SakithLiyanage"
-            target="_blank"
-            class="github-profile-link"
-          >
-            <i class="bx bxl-github"></i> github.com/SakithLiyanage
-          </a>
-          <div class="github-metrics">
-            <div class="metric">
-              <span class="count">20+</span>
-              <span class="label">Repositories</span>
-            </div>
-            <div class="metric">
-              <span class="count">400+</span>
-              <span class="label">Contributions</span>
-            </div>
-          </div>
-        </div>
-        <div class="about-btn">
-          <button class="active">Main Skills</button>
-          <button>Experience</button>
-          <button>Certifications</button>
-          <button>Education</button>
-          <button>GitHub</button>
-        </div>
-        <div class="content-btn">
-          <div class="content">
-            <div class="text-box">
-              <p>Programming Languages</p>
-              <span>Java, Kotlin, JavaScript, Python, Dart</span>
-            </div>
-            <div class="text-box">
-              <p>Web & App Development</p>
-              <span>HTML, CSS, Bootstrap, Tailwind, React, Node.js, Flutter</span>
-            </div>
-            <div class="text-box">
-              <p>Backend Technologies</p>
-              <span>Express, MongoDB, MySQL, SQL, Firebase</span>
-            </div>
-            <div class="text-box">
-              <p>Tools & Platforms</p>
-              <span>Git, GitHub, Android Studio, VS Code, Postman</span>
-            </div>
-            <div class="text-box">
-              <p>Soft Skills</p>
-              <span>Communication, Time Management, Teamwork, Problem Solving</span>
+        <div class="about-content">
+          <div class="section-tag">Who I Am</div>
+          <h2 class="heading">About Me</h2>
+          <h3>Associate Software Engineer · Full Stack Developer · SLIIT Undergraduate</h3>
+          <p>
+            Associate Software Engineer at <strong style="color:#a78bfa">Data Management Systems (Pvt) Ltd</strong>, currently pursuing a BSc in Information Technology at SLIIT. I specialise in crafting intuitive front-end experiences and robust back-end systems — delivering scalable, full-stack web applications using modern technologies. A SLIIT Dean's List achiever, hackathon finalist, and active open-source contributor with 500+ LinkedIn connections and a growing GitHub presence.
+          </p>
+          <div class="github-stats">
+            <a
+              href="https://github.com/SakithLiyanage"
+              target="_blank"
+              class="github-profile-link"
+            >
+              <i class="bx bxl-github"></i> github.com/SakithLiyanage
+            </a>
+            <div class="github-metrics">
+              <div class="metric">
+                <span class="count">20+</span>
+                <span class="label">Repositories</span>
+              </div>
+              <div class="metric">
+                <span class="count">400+</span>
+                <span class="label">Contributions</span>
+              </div>
             </div>
           </div>
+          <div class="about-btn">
+            <button class="active">Main Skills</button>
+            <button>Experience</button>
+            <button>Certifications</button>
+            <button>Education</button>
+            <button>GitHub</button>
+          </div>
+          <div class="content-btn">
+            <div class="content">
+              <div class="text-box">
+                <p>Programming Languages</p>
+                <span>Java, Kotlin, JavaScript, Python, Dart</span>
+              </div>
+              <div class="text-box">
+                <p>Web &amp; App Development</p>
+                <span>HTML, CSS, Bootstrap, Tailwind, React, Node.js, Flutter</span>
+              </div>
+              <div class="text-box">
+                <p>Backend Technologies</p>
+                <span>Express, MongoDB, MySQL, SQL, Firebase</span>
+              </div>
+              <div class="text-box">
+                <p>Tools &amp; Platforms</p>
+                <span>Git, GitHub, Android Studio, VS Code, Postman</span>
+              </div>
+              <div class="text-box">
+                <p>Soft Skills</p>
+                <span>Communication, Time Management, Teamwork, Problem Solving</span>
+              </div>
+            </div>
 
-          <div class="content">
-            <div class="text-box">
-              <p>Associate Software Engineer</p>
-              <span>Data Management Systems - Division 2 | Aug 2025 - Present</span>
+            <div class="content">
+              <div class="text-box">
+                <p>Associate Software Engineer</p>
+                <span>Data Management Systems (Pvt) Ltd · Full-time | Aug 2025 – Present · Colombo, Sri Lanka</span>
+              </div>
             </div>
-          </div>
 
-          <div class="content">
-            <div class="text-box">
-              <p>Certificate Course in Web Designing</p>
-              <span>University of Kelaniya Sri Lanka</span>
+            <div class="content">
+              <div class="text-box">
+                <p>Certificate Course in Web Designing</p>
+                <span>University of Kelaniya Sri Lanka</span>
+              </div>
+              <div class="text-box">
+                <p>Web Design for Beginners</p>
+                <span>University of Moratuwa</span>
+              </div>
+              <div class="text-box">
+                <p>Front-End Web Development</p>
+                <span>University of Moratuwa</span>
+              </div>
+              <div class="text-box">
+                <p>The Complete HTML &amp; CSS Course: Build Websites like a Pro</p>
+                <span>Udemy</span>
+              </div>
+              <div class="text-box">
+                <p>Certificate Course in Graphic Designing</p>
+                <span>University of Kelaniya Sri Lanka</span>
+              </div>
+              <div class="text-box">
+                <p>Python for Beginners</p>
+                <span>University of Moratuwa</span>
+              </div>
+              <div class="text-box">
+                <p>AI/ML Engineer &ndash; Stage 1</p>
+                <span>SLIIT</span>
+              </div>
+              <div class="text-box">
+                <p>Project Management Foundations</p>
+                <span>LinkedIn</span>
+              </div>
+              <div class="text-box">
+                <p>Problem Solving (Intermediate)</p>
+                <span>HackerRank</span>
+              </div>
+              <div class="text-box">
+                <p>MongoDB Node.js Developer Path</p>
+                <span>MongoDB</span>
+              </div>
             </div>
-            <div class="text-box">
-              <p>Web Design for Beginners</p>
-              <span>University of Moratuwa</span>
-            </div>
-            <div class="text-box">
-              <p>Front-End Web Development</p>
-              <span>University of Moratuwa</span>
-            </div>
-            <div class="text-box">
-              <p>The Complete HTML & CSS Course: Build Websites like a Pro</p>
-              <span>Udemy</span>
-            </div>
-            <div class="text-box">
-              <p>Certificate Course in Graphic Designing</p>
-              <span>University of Kelaniya Sri Lanka</span>
-            </div>
-            <div class="text-box">
-              <p>Python for Beginners</p>
-              <span>University of Moratuwa</span>
-            </div>
-            <div class="text-box">
-              <p>AI/ML Engineer – Stage 1</p>
-              <span>SLIIT</span>
-            </div>
-            <div class="text-box">
-              <p>Project Management Foundations</p>
-              <span>LinkedIn</span>
-            </div>
-            <div class="text-box">
-              <p>Problem Solving (Intermediate)</p>
-              <span>HackerRank</span>
-            </div>
-            <div class="text-box">
-              <p>MongoDB Node.js Developer Path</p>
-              <span>MongoDB</span>
-            </div>
-          </div>
 
-          <div class="content">
-            <div class="text-box">
-              <p>Mahinda Rajapaksha College, Homagama</p>
-              <span>G.C.E.O/L - A7 B2 | G.C.E.A/L - A2C1 (Business Studies, Accounting, Information Technology) | 2016-2022</span>
+            <div class="content">
+              <div class="text-box">
+                <p>Mahinda Rajapaksha College, Homagama</p>
+                <span>G.C.E.O/L - A7 B2 | G.C.E.A/L - A2C1 (Business Studies, Accounting, Information Technology) | 2016-2022</span>
+              </div>
+              <div class="text-box">
+                <p>Sri Lanka Institute of Information Technology (SLIIT)</p>
+                <span>BSc (Hons) in Information Technology Specialising in Software Engineering (Currently pursuing) | 2023 - 2027</span>
+              </div>
             </div>
-            <div class="text-box">
-              <p>Sri Lanka Institute of Information Technology (SLIIT)</p>
-              <span
-                >BSc (Hons) in Information Technology Specialising in Software Engineering (Currently pursuing) | 2023 - 2027</span
-              >
-            </div>
-          </div>
 
-          <div class="content">
-            <div class="text-box">
-              <p>Open Source Contributions</p>
-              <span
-                >Active contributor to open source projects, focusing on web
-                development tools and UI components.</span
-              >
-            </div>
-            <div class="text-box">
-              <p>Personal Projects</p>
-              <span
-                >Developed and maintained multiple personal projects showcasing
-                skills in React, Node.js, and responsive design.</span
-              >
-            </div>
-            <div class="text-box">
-              <p>Collaborative Development</p>
-              <span
-                >Collaborated with other developers on GitHub through pull
-                requests, code reviews, and issue management.</span
-              >
+            <div class="content">
+              <div class="text-box">
+                <p>Open Source Contributions</p>
+                <span>Active contributor to open source projects, focusing on web development tools and UI components.</span>
+              </div>
+              <div class="text-box">
+                <p>Personal Projects</p>
+                <span>Developed and maintained multiple personal projects showcasing skills in React, Node.js, and responsive design.</span>
+              </div>
+              <div class="text-box">
+                <p>Collaborative Development</p>
+                <span>Collaborated with other developers on GitHub through pull requests, code reviews, and issue management.</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="cvContent">
-          <a href="img/resume.pdf" target="_blank" class="btn d-CV"
-            >Download CV <i class="bx bx-download"></i
-          ></a>
+          <div class="cvContent">
+            <a href="img/resume.pdf" target="_blank" class="btn d-CV"
+              >Download CV <i class="bx bx-download"></i
+            ></a>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- ==================== TECH SKILLS ==================== -->
     <section class="tech-section" id="tech-skills">
       <div class="main-text">
-        <h2 class="heading">Tools & Technologies</h2>
+        <div class="section-tag" style="justify-content: center; margin-bottom: 1rem;">Tech Stack</div>
+        <h2 class="heading">Tools &amp; Technologies</h2>
         <span>Technologies I'm proficient with</span>
       </div>
 
@@ -388,107 +379,59 @@
           <div class="tech-category">
             <h3 class="category-title">Frontend</h3>
             <div class="tech-icons">
-              <div class="tech-icon" data-tooltip="HTML5">
-                <i class="bx bxl-html5"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="CSS3">
-                <i class="bx bxl-css3"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="JavaScript">
-                <i class="bx bxl-javascript"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="React">
-                <i class="bx bxl-react"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="Bootstrap">
-                <i class="bx bxl-bootstrap"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="SASS">
-                <i class="bx bxl-sass"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="Tailwind CSS">
-                <i class="bx bxl-tailwind-css"></i>
-              </div>
+              <div class="tech-icon" data-tooltip="HTML5"><i class="bx bxl-html5"></i></div>
+              <div class="tech-icon" data-tooltip="CSS3"><i class="bx bxl-css3"></i></div>
+              <div class="tech-icon" data-tooltip="JavaScript"><i class="bx bxl-javascript"></i></div>
+              <div class="tech-icon" data-tooltip="React"><i class="bx bxl-react"></i></div>
+              <div class="tech-icon" data-tooltip="Bootstrap"><i class="bx bxl-bootstrap"></i></div>
+              <div class="tech-icon" data-tooltip="SASS"><i class="bx bxl-sass"></i></div>
+              <div class="tech-icon" data-tooltip="Tailwind CSS"><i class="bx bxl-tailwind-css"></i></div>
             </div>
           </div>
 
           <div class="tech-category">
             <h3 class="category-title">Backend</h3>
             <div class="tech-icons">
-              <div class="tech-icon" data-tooltip="Node.js">
-                <i class="bx bxl-nodejs"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="PHP">
-                <i class="bx bxl-php"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="Python">
-                <i class="bx bxl-python"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="MongoDB">
-                <i class="bx bxl-mongodb"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="MySQL">
-                <i class="bx bx-data"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="Express.js">
-                <i class="bx bx-server"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="Java">
-                <i class="bx bxl-java"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="C">
-                <i class="bx bx-code"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="C++">
-                <i class="bx bxl-c-plus-plus"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="Kotlin">
-                <i class="bx bx-code-curly"></i>
-              </div>
+              <div class="tech-icon" data-tooltip="Node.js"><i class="bx bxl-nodejs"></i></div>
+              <div class="tech-icon" data-tooltip="PHP"><i class="bx bxl-php"></i></div>
+              <div class="tech-icon" data-tooltip="Python"><i class="bx bxl-python"></i></div>
+              <div class="tech-icon" data-tooltip="MongoDB"><i class="bx bxl-mongodb"></i></div>
+              <div class="tech-icon" data-tooltip="MySQL"><i class="bx bx-data"></i></div>
+              <div class="tech-icon" data-tooltip="Express.js"><i class="bx bx-server"></i></div>
+              <div class="tech-icon" data-tooltip="Java"><i class="bx bxl-java"></i></div>
+              <div class="tech-icon" data-tooltip="C"><i class="bx bx-code"></i></div>
+              <div class="tech-icon" data-tooltip="C++"><i class="bx bxl-c-plus-plus"></i></div>
+              <div class="tech-icon" data-tooltip="Kotlin"><i class="bx bx-code-curly"></i></div>
             </div>
           </div>
 
           <div class="tech-category">
-            <h3 class="category-title">DevOps & Tools</h3>
+            <h3 class="category-title">DevOps &amp; Tools</h3>
             <div class="tech-icons">
-              <div class="tech-icon" data-tooltip="Git">
-                <i class="bx bxl-git"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="GitHub">
-                <i class="bx bxl-github"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="VS Code">
-                <i class="bx bxl-visual-studio"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="Terminal">
-                <i class="bx bx-terminal"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="Android Studio">
-                <i class="bx bxl-android"></i>
-              </div>
+              <div class="tech-icon" data-tooltip="Git"><i class="bx bxl-git"></i></div>
+              <div class="tech-icon" data-tooltip="GitHub"><i class="bx bxl-github"></i></div>
+              <div class="tech-icon" data-tooltip="VS Code"><i class="bx bxl-visual-studio"></i></div>
+              <div class="tech-icon" data-tooltip="Terminal"><i class="bx bx-terminal"></i></div>
+              <div class="tech-icon" data-tooltip="Android Studio"><i class="bx bxl-android"></i></div>
             </div>
           </div>
 
           <div class="tech-category">
             <h3 class="category-title">Design Tools</h3>
             <div class="tech-icons">
-              <div class="tech-icon" data-tooltip="Adobe Photoshop">
-                <i class="bx bxl-adobe"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="Adobe Illustrator">
-                <i class="bx bxl-adobe"></i>
-              </div>
-              <div class="tech-icon" data-tooltip="Figma">
-                <i class="bx bxl-figma"></i>
-              </div>
+              <div class="tech-icon" data-tooltip="Adobe Photoshop"><i class="bx bxl-adobe"></i></div>
+              <div class="tech-icon" data-tooltip="Adobe Illustrator"><i class="bx bxl-adobe"></i></div>
+              <div class="tech-icon" data-tooltip="Figma"><i class="bx bxl-figma"></i></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ==================== SERVICES ==================== -->
     <section class="services" id="services">
       <div class="main-text">
+        <div class="section-tag" style="justify-content: center; margin-bottom: 1rem;">What I Do</div>
         <h2 class="heading">My Services</h2>
         <span
           >Explore a range of expert services tailored to enhance your digital
@@ -508,8 +451,7 @@
             Specializing in web development, I craft dynamic websites with a
             keen focus on functionality and seamless user experiences. From
             responsive designs to robust backend solutions, each project
-            reflects my commitment to innovation. Let's collaborate and turn
-            your digital vision into a captivating online reality.
+            reflects my commitment to innovation.
           </p>
         </div>
         <div class="servicesItem">
@@ -521,10 +463,7 @@
           <p>
             Passionate about visual storytelling, I specialize in graphic
             design, crafting compelling visuals that leave a lasting impression.
-            With a keen eye for aesthetics, I bring ideas to life through
-            captivating designs, from brand identities to marketing materials.
-            Let's collaborate to convey your message creatively and make a
-            lasting impact.
+            From brand identities to marketing materials &mdash; making a lasting impact.
           </p>
         </div>
 
@@ -538,8 +477,7 @@
             Blending creativity with functionality, I excel in UI/UX design,
             ensuring seamless and enjoyable user experiences. From intuitive
             interfaces to user-centric designs, I craft solutions that harmonize
-            aesthetics and usability. Let's collaborate to enhance your digital
-            presence and deliver a captivating journey for your users.
+            aesthetics and usability.
           </p>
         </div>
 
@@ -552,33 +490,27 @@
           <p>
             Specializing in digital marketing, I drive success through strategic
             solutions. From targeted campaigns to social media strategies, I
-            leverage data-driven insights for effective online visibility. Let's
-            amplify your brand's reach, connect with your audience, and achieve
-            measurable results in the dynamic digital landscape.
+            leverage data-driven insights for effective online visibility.
           </p>
         </div>
       </div>
 
       <div class="proposal">
         <div class="text-box">
-          <span>Get It Touch</span>
+          <span>Get In Touch</span>
           <h3>Have a Project On Your Mind</h3>
-          <a href="#contact" class="btn">Contact Me</a>
+          <a href="#contact" class="btn">Contact Me <i class="bx bx-right-arrow-alt"></i></a>
         </div>
         <img src="img/idea.png" class="first" alt="Light bulb idea illustration" loading="lazy" decoding="async" />
       </div>
 
-      <div class="showcase">
-        <img src="shapes/ring.png" class="ring" alt="" role="presentation" aria-hidden="true" loading="lazy" />
-        <img src="shapes/circle.png" class="circle" alt="" role="presentation" aria-hidden="true" loading="lazy" />
-        <img src="shapes/circle.png" class="circle2" alt="" role="presentation" aria-hidden="true" loading="lazy" />
-        <img src="shapes/circle.png" class="circle3" alt="" role="presentation" aria-hidden="true" loading="lazy" />
-        <img src="shapes/half-ring.png" class="half-ring" alt="" role="presentation" aria-hidden="true" loading="lazy" />
-      </div>
+      <div class="showcase"></div>
     </section>
 
+    <!-- ==================== PORTFOLIO ==================== -->
     <section class="portfolio" id="portfolio">
       <div class="main-text">
+        <div class="section-tag" style="justify-content: center; margin-bottom: 1rem;">Selected Work</div>
         <h2 class="heading">My Latest Projects</h2>
         <span
           >Explore a showcase of my recent full stack development projects,
@@ -601,113 +533,117 @@
       <div class="portfolio-gallery">
 
         <div class="portfolio-box mix web">
-          <div class="portfolio-content">
-            <h3>BizNest - Entrepreneurial Toolkit Mobile App</h3>
-            <p>
-              BizNest is a comprehensive mobile app designed to empower entrepreneurs with essential tools for business success. 
-            </p>
-          </div>
           <div class="portfolio-img">
             <img src="img/biznest.jpg" alt="BizNest entrepreneurial toolkit mobile app UI" loading="lazy" decoding="async" />
           </div>
+          <div class="portfolio-content">
+            <h3>BizNest - Entrepreneurial Toolkit Mobile App</h3>
+            <p>
+              BizNest is a comprehensive mobile app designed to empower entrepreneurs with essential tools for business success.
+            </p>
+          </div>
         </div>
 
         <div class="portfolio-box mix web">
-          <div class="portfolio-content">
-            <h3>UrbanCare - Smart Healthcare Management System</h3>
-            <p>
-              A comprehensive Smart Healthcare Management System developed as a CSSE module group project. 
-            </p>
-          </div>
           <div class="portfolio-img">
             <img src="img/urbancare.png" alt="UrbanCare smart healthcare management system UI" loading="lazy" decoding="async" />
           </div>
+          <div class="portfolio-content">
+            <h3>UrbanCare - Smart Healthcare Management System</h3>
+            <p>
+              A comprehensive Smart Healthcare Management System developed as a CSSE module group project.
+            </p>
+          </div>
         </div>
 
         <div class="portfolio-box mix web">
+          <div class="portfolio-img">
+            <img src="img/ripple_web.jpg" alt="Ripple Studio recording studio booking platform" loading="lazy" decoding="async" />
+          </div>
           <div class="portfolio-content">
-            <h3>Ripple Studio — Modern Recording Studio Booking Platform</h3>
+            <h3>Ripple Studio &mdash; Modern Recording Studio Booking Platform</h3>
             <p>
               Ripple Studio is a full-stack web platform connecting musicians with recording studios through real-time discovery, booking, and payments.
             </p>
           </div>
+        </div>
+
+        <div class="portfolio-box mix web">
           <div class="portfolio-img">
-            <img src="img/ripple_web.jpg" alt="Ripple Studio recording studio booking platform" loading="lazy" decoding="async" />
+            <img src="img/e_grama.jpg" alt="e-Grama digital certificate issuance platform" loading="lazy" decoding="async" />
+          </div>
+          <div class="portfolio-content">
+            <h3>e-Grama digital certificate issuance and management platform for Sri Lanka</h3>
+            <p>
+              e-Grama is a Proof-of-Concept platform built for the ReviveNation Codefest Competition to modernize Sri Lanka's certificate issuance process.
+            </p>
           </div>
         </div>
 
         <div class="portfolio-box mix web">
-          <div class="portfolio-content">
-            <h3>e-Grama digital certificate issuance and management platform for Sri Lanka</h3>
-            <p>
-              e-Grama is a Proof-of-Concept platform built for the ReviveNation Codefest Competition to modernize Sri Lanka’s certificate issuance process.
-            </p>
-          </div>
           <div class="portfolio-img">
-            <img src="img/e_grama.jpg" alt="e-Grama digital certificate issuance platform" loading="lazy" decoding="async" />
+            <img src="img/langbridge.png" alt="LangBridge language translator web app" loading="lazy" decoding="async" />
           </div>
-        </div>
-        <div class="portfolio-box mix web">
           <div class="portfolio-content">
             <h3>LangBridge Language Translator</h3>
             <p>
               A full-stack web app for translating Sinhala, English, Tamil with features like voice input, quizzes, community, and AI examples.
             </p>
           </div>
-          <div class="portfolio-img">
-            <img src="img/langbridge.png" alt="LangBridge language translator web app" loading="lazy" decoding="async" />
-          </div>
         </div>
+
         <div class="portfolio-box mix web">
+          <div class="portfolio-img">
+            <img src="img/creativestudio.png" alt="CreativeForge creative studio AI tools dashboard" loading="lazy" decoding="async" />
+          </div>
           <div class="portfolio-content">
             <h3>CreativeForge Creative Studio</h3>
             <p>
               CreativeForge streamlines media tasks with AI tools for documents, images, QR codes, URLs, email, chatbot, and real-time dashboard. Built with MERN Stacks and Tailwind CSS.
             </p>
           </div>
-          <div class="portfolio-img">
-            <img src="img/creativestudio.png" alt="CreativeForge creative studio AI tools dashboard" loading="lazy" decoding="async" />
-          </div>
         </div>
 
         <div class="portfolio-box mix web">
+          <div class="portfolio-img">
+            <img src="img/lms.png" alt="Learning Management System interface" loading="lazy" decoding="async" />
+          </div>
           <div class="portfolio-content">
             <h3>Learning Management System</h3>
             <p>
               Developed a MERN-based Learning Management System with role-based access, enabling course management, student submissions, real-time notifications, grading logic, and a modern, responsive interface.
             </p>
           </div>
-          <div class="portfolio-img">
-            <img src="img/lms.png" alt="Learning Management System interface" loading="lazy" decoding="async" />
-          </div>
         </div>
+
         <div class="portfolio-box mix web">
+          <div class="portfolio-img">
+            <img src="img/buildmart.png" alt="BuildMart auction and procurement platform UI" loading="lazy" decoding="async" />
+          </div>
           <div class="portfolio-content">
-            <h3>
-              BuildMart – Auction and procurement system for construction Industry
-            </h3>
+            <h3>BuildMart &mdash; Auction and procurement system for construction Industry</h3>
             <p>
               Designed a scalable auction and procurement platform with user/job management features. Built with MERN Stacks and Tailwind CSS.
             </p>
           </div>
-          <div class="portfolio-img">
-            <img src="img/buildmart.png" alt="BuildMart auction and procurement platform UI" loading="lazy" decoding="async" />
-          </div>
         </div>
 
         <div class="portfolio-box mix web">
-          <div class="portfolio-content">
-            <h3>TradeSphere Marketplace</h3>
-            <p>
-              A Full-Stack MERN E-Commerce Platform for Seamless Buying & Selling. Built with MERN Stacks and Tailwind CSS.
-            </p>
-          </div>
           <div class="portfolio-img">
             <img src="img/tradesphere.png" alt="TradeSphere marketplace app screenshot" loading="lazy" decoding="async" />
           </div>
+          <div class="portfolio-content">
+            <h3>TradeSphere Marketplace</h3>
+            <p>
+              A Full-Stack MERN E-Commerce Platform for Seamless Buying &amp; Selling. Built with MERN Stacks and Tailwind CSS.
+            </p>
+          </div>
         </div>
 
         <div class="portfolio-box mix web">
+          <div class="portfolio-img">
+            <img src="img/socialmedia.png" alt="ConnectHub social media web app UI" loading="lazy" decoding="async" />
+          </div>
           <div class="portfolio-content">
             <h3>ConnectHub Social Media WebApp</h3>
             <p>
@@ -716,111 +652,102 @@
               experience.
             </p>
           </div>
-          <div class="portfolio-img">
-            <img src="img/socialmedia.png" alt="ConnectHub social media web app UI" loading="lazy" decoding="async" />
-          </div>
         </div>
 
         <div class="portfolio-box mix mobile">
-          <div class="portfolio-content">
-            <h3>Eventix Event Ticket Booking Mobile App</h3>
-            <p>
-              Eventix: Your Gateway to Seamless Event Discovery and Booking
-              Eventix is a sleek, user-friendly mobile application designed to
-              simplify how you discover, book, and manage tickets for a wide
-              range of events., Eventix brings the event world directly to your
-              fingertips.
-            </p>
-          </div>
           <div class="portfolio-img">
             <img src="img/eventix.jpeg" alt="Eventix ticket booking mobile app" loading="lazy" decoding="async" />
           </div>
+          <div class="portfolio-content">
+            <h3>Eventix Event Ticket Booking Mobile App</h3>
+            <p>
+              Eventix is a sleek, user-friendly mobile application designed to
+              simplify how you discover, book, and manage tickets for a wide
+              range of events.
+            </p>
+          </div>
         </div>
 
         <div class="portfolio-box mix mobile">
+          <div class="portfolio-img">
+            <img src="img/FinFlow.jpeg" alt="FinFlow financial tracking mobile app" loading="lazy" decoding="async" />
+          </div>
           <div class="portfolio-content">
             <h3>FinFlow Financial Tracking Mobile App</h3>
             <p>
               FinFlow, a comprehensive financial tracking mobile application
-              developed entirely in Kotlin! This app is designed to help users
-              take control of their finances, track expenses, manage budgets,
-              and gain insights into their spending habits.
+              developed entirely in Kotlin to help users take control of their finances.
             </p>
-          </div>
-          <div class="portfolio-img">
-            <img src="img/FinFlow.jpeg" alt="FinFlow financial tracking mobile app" loading="lazy" decoding="async" />
           </div>
         </div>
 
-        
-
         <div class="portfolio-box mix web">
+          <div class="portfolio-img">
+            <img src="img/images.png" alt="ToneGallery online music store project" loading="lazy" decoding="async" />
+          </div>
           <div class="portfolio-content">
             <h3>ToneGallery Online Music Store</h3>
             <p>
               Built a Java-based music product catalog system with admin panel, search functionality, and payment simulation. Technologies: Java, SQL, Bootstrap.
             </p>
           </div>
-          <div class="portfolio-img">
-            <img src="img/images.png" alt="ToneGallery online music store project" loading="lazy" decoding="async" />
-          </div>
         </div>
 
         <div class="portfolio-box mix web">
+          <div class="portfolio-img">
+            <img src="img/images.png" alt="GalleryGavel online art marketplace project" loading="lazy" decoding="async" />
+          </div>
           <div class="portfolio-content">
-            <h3>GalleryGavel – Online Art Marketplace</h3>
+            <h3>GalleryGavel &mdash; Online Art Marketplace</h3>
             <p>
               Combined e-commerce and auction concepts in an online platform for artists and buyers. Technologies: PHP, MySQL, JavaScript.
             </p>
           </div>
-          <div class="portfolio-img">
-            <img src="img/images.png" alt="GalleryGavel online art marketplace project" loading="lazy" decoding="async" />
-          </div>
         </div>
 
         <div class="portfolio-box mix web">
+          <div class="portfolio-img">
+            <img src="img/vns.jpg" alt="VN Sports Dressings website redesign" loading="lazy" decoding="async" />
+          </div>
           <div class="portfolio-content">
             <h3>VN Sports Dressings</h3>
             <p>
               Revamped VN Sports Dressings site with dynamic design and
-              innovative features, embodying the brand's essence in sports
-              fashion.
+              innovative features, embodying the brand's essence in sports fashion.
             </p>
-          </div>
-          <div class="portfolio-img">
-            <img src="img/vns.jpg" alt="VN Sports Dressings website redesign" loading="lazy" decoding="async" />
           </div>
         </div>
 
         <div class="portfolio-box mix web">
+          <div class="portfolio-img">
+            <img src="img/orbiter.jpg" alt="Orbiter Shoes ecommerce project" loading="lazy" decoding="async" />
+          </div>
           <div class="portfolio-content">
             <h3>Orbiter Shoes</h3>
             <p>
               Stepping into innovation, the Orbiter Shoes project showcases a
-              fusion of cutting-edge design, comfort, and style in footwear
-              fashion.
+              fusion of cutting-edge design, comfort, and style in footwear fashion.
             </p>
-          </div>
-          <div class="portfolio-img">
-            <img src="img/orbiter.jpg" alt="Orbiter Shoes ecommerce project" loading="lazy" decoding="async" />
           </div>
         </div>
 
         <div class="portfolio-box mix web">
+          <div class="portfolio-img">
+            <img src="img/rapid cart.jpg" alt="Rapid Cart shopping web application" loading="lazy" decoding="async" />
+          </div>
           <div class="portfolio-content">
             <h3>Rapid Cart Shopping</h3>
             <p>
               Revolutionizing the shopping experience, Rapid Cart combines sleek
-              design with seamless functionality, offering a swift and
-              user-friendly online retail solution.
+              design with seamless functionality.
             </p>
-          </div>
-          <div class="portfolio-img">
-            <img src="img/rapid cart.jpg" alt="Rapid Cart shopping web application" loading="lazy" decoding="async" />
           </div>
         </div>
 
         <div class="portfolio-box mix web">
+          <div class="portfolio-img">
+            <img src="img/colorscape.jpg" alt="ColorScape IT Solutions website" loading="lazy" decoding="async" />
+          </div>
           <div class="portfolio-content">
             <h3>ColorScape IT Solutions</h3>
             <p>
@@ -829,79 +756,69 @@
               harmonize innovation with functionality.
             </p>
           </div>
-          <div class="portfolio-img">
-            <img src="img/colorscape.jpg" alt="ColorScape IT Solutions website" loading="lazy" decoding="async" />
-          </div>
         </div>
 
         <div class="portfolio-box mix web">
+          <div class="portfolio-img">
+            <img src="img/appdiscover.png" alt="Appdiscover.io platform interface" loading="lazy" decoding="async" />
+          </div>
           <div class="portfolio-content">
             <h3>Appdiscover.io</h3>
             <p>
               Elevating app exploration, Appdiscover.io showcases a seamless
-              platform that simplifies app discovery, blending intuitive design
-              with efficient functionality.
+              platform that simplifies app discovery.
             </p>
-          </div>
-          <div class="portfolio-img">
-            <img src="img/appdiscover.png" alt="Appdiscover.io platform interface" loading="lazy" decoding="async" />
           </div>
         </div>
 
         <div class="portfolio-box mix branding">
-          <div class="portfolio-content">
-            <h3>New Inland Coffee Package Design</h3>
-            <p>
-              Unveiling a fresh perspective in every sip, the New Inland Coffee
-              packet design project blends aesthetics and functionality to
-              create an eye-catching packaging that resonates with coffee
-              enthusiasts.
-            </p>
-          </div>
           <div class="portfolio-img">
             <img src="img/inland.png" alt="New Inland Coffee package design" loading="lazy" decoding="async" />
           </div>
-        </div>
-        <div class="portfolio-box mix branding">
           <div class="portfolio-content">
-            <h3>New Inland Coffee Logo Design</h3>
+            <h3>New Inland Coffee Package Design</h3>
             <p>
-              Crafting a distinctive brand identity, the New Inland Coffee Logo
-              Design project captures the essence of the brew, combining
-              elegance and uniqueness to visually represent the soulful
-              experience of Inland Coffee.
+              Eye-catching packaging design that resonates with coffee enthusiasts, blending aesthetics and functionality.
             </p>
           </div>
+        </div>
+
+        <div class="portfolio-box mix branding">
           <div class="portfolio-img">
             <img src="img/inland logo.png" alt="New Inland Coffee logo design" loading="lazy" decoding="async" />
           </div>
-        </div>
-        <div class="portfolio-box mix web">
           <div class="portfolio-content">
-            <h3>Open LK YT Channel Website</h3>
+            <h3>New Inland Coffee Logo Design</h3>
             <p>
-              Bringing the Open LK YouTube Channel to the web, this project
-              seamlessly merges video content with an engaging and user-friendly
-              online platform.
+              Crafting a distinctive brand identity, combining elegance and uniqueness to visually represent the soulful experience of Inland Coffee.
             </p>
           </div>
+        </div>
+
+        <div class="portfolio-box mix web">
           <div class="portfolio-img">
             <img src="img/openlk.jpeg.png" alt="Open LK YouTube channel website" loading="lazy" decoding="async" />
           </div>
-        </div>
-        <div class="portfolio-box mix web">
           <div class="portfolio-content">
-            <h3>SriCare Services</h3>
+            <h3>Open LK YT Channel Website</h3>
             <p>
-              Empowering healthcare through SriCare Services, this project
-              integrates cutting-edge technology with compassionate care,
-              ensuring a seamless and patient-centric experience.
+              Bringing the Open LK YouTube Channel to the web, seamlessly merging video content with an engaging online platform.
             </p>
           </div>
+        </div>
+
+        <div class="portfolio-box mix web">
           <div class="portfolio-img">
             <img src="img/sricare.png" alt="SriCare services healthcare project" loading="lazy" decoding="async" />
           </div>
+          <div class="portfolio-content">
+            <h3>SriCare Services</h3>
+            <p>
+              Empowering healthcare through SriCare Services, integrating cutting-edge technology with compassionate care.
+            </p>
+          </div>
         </div>
+
       </div>
 
       <div class="github-activity">
@@ -921,26 +838,28 @@
         ></a>
       </div>
 
-      <div class="fillter-buttons">
+      <div class="fillter-buttons" style="margin-top: 2.5rem;">
         <br />
         <a
-          href="https://www.linkedin.com/in/sakith-chanlaka-970867237/details/projects/"
+          href="https://www.linkedin.com/in/sakith-chanlaka/details/projects/"
           class="btn"
           target="_blank"
-          >View More LinkedIn Projects >></a
+          >View More LinkedIn Projects <i class="bx bxl-linkedin"></i></a
         >
         <a
           href="https://github.com/SakithLiyanage?tab=repositories"
-          class="btn"
+          class="btn btn-outline"
           target="_blank"
-          >View GitHub Repositories >></a
+          >View GitHub Repositories <i class="bx bxl-github"></i></a
         >
       </div>
     </section>
 
+    <!-- ==================== AWARDS ==================== -->
     <section class="awards-section" id="awards">
       <div class="main-text">
-        <h2 class="heading">Awards & Achievements</h2>
+        <div class="section-tag" style="justify-content: center; margin-bottom: 1rem;">Recognition</div>
+        <h2 class="heading">Awards &amp; Achievements</h2>
         <span>Recognition for excellence in academics and competitions</span>
       </div>
       <div class="awards-container">
@@ -977,8 +896,10 @@
       </div>
     </section>
 
+    <!-- ==================== CONTACT ==================== -->
     <section class="down-box" id="contact">
       <div class="main-text">
+        <div class="section-tag" style="justify-content: center; margin-bottom: 1rem;">Let's Talk</div>
         <h2 class="heading">Get In Touch</h2>
         <span>Let's build something amazing together</span>
       </div>
@@ -990,7 +911,7 @@
             </div>
             <div class="contact-details">
               <h3>My Location</h3>
-              <p>Homagama, Sri Lanka</p>
+              <p>Colombo, Western Province, Sri Lanka &#127473;&#127472;</p>
             </div>
           </div>
 
@@ -1028,7 +949,7 @@
                 ><i class="bx bxl-github"></i
               ></a>
               <a
-                href="https://www.linkedin.com/in/sakith-chanlaka-970867237/"
+                href="https://www.linkedin.com/in/sakith-chanlaka/"
                 target="_blank"
                 aria-label="LinkedIn"
                 ><i class="bx bxl-linkedin"></i
@@ -1087,7 +1008,7 @@
             </div>
 
             <button type="submit" class="send-btn">
-              <span style="color: rgb(218, 217, 217)">Send Message</span>
+              <span style="color: #fff">Send Message</span>
               <i class="bx bx-send"></i>
             </button>
 
@@ -1100,15 +1021,15 @@
     <footer>
       <div class="footer-content">
         <p>
-          Copyright © 2026 Creative Web Solution By
-          <span>Sakith Liyanage</span> | Version 2.0 || All Rights Reserved.
+          Copyright &copy; 2026 Creative Web Solution By
+          <span>Sakith Liyanage</span> | Version 3.0 || All Rights Reserved.
         </p>
         <div class="footer-social">
           <a href="https://github.com/SakithLiyanage" target="_blank"
             ><i class="bx bxl-github"></i
           ></a>
           <a
-            href="https://www.linkedin.com/in/sakith-chanlaka-970867237/"
+            href="https://www.linkedin.com/in/sakith-chanlaka/"
             target="_blank"
             ><i class="bx bxl-linkedin"></i
           ></a>
@@ -1133,33 +1054,80 @@
       </span>
     </div>
 
-    <!-- AI Chatbot -->
-    <div class="chat-bot-container">
-      <div class="chat-box">
-        <div class="chat-header">
-          <h3><i class="bx bx-bot"></i> Sakith Assistant</h3>
-          <button id="close-chat"><i class="bx bx-x"></i></button>
-        </div>
-        <div class="chat-messages">
-          <div class="message bot">
-            <p>
-              👋 Hi there! I'm Sakith's AI assistant. How can I help you today?
-            </p>
+    <!-- ==================== AI PERSONAL ASSISTANT ==================== -->
+    <div class="sakith-assistant" id="sakithAssistant">
+
+      <!-- Toggle FAB -->
+      <button class="sa-fab" id="saToggle" aria-label="Open Sakith Assistant">
+        <span class="sa-fab-icon open"><i class="bx bx-bot"></i></span>
+        <span class="sa-fab-icon close" style="display:none"><i class="bx bx-x"></i></span>
+        <span class="sa-fab-badge" id="saBadge">1</span>
+        <span class="sa-fab-ripple"></span>
+      </button>
+
+      <!-- Chat Panel -->
+      <div class="sa-panel" id="saPanel">
+
+        <!-- Panel Header -->
+        <div class="sa-header">
+          <div class="sa-header-left">
+            <div class="sa-avatar">
+              <img src="img/itz me.jpg" alt="Sakith" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="sa-avatar-fallback"><i class="bx bx-user"></i></div>
+              <span class="sa-status-dot"></span>
+            </div>
+            <div class="sa-header-info">
+              <h4>Sakith's Assistant</h4>
+              <span class="sa-online-label"><span class="sa-online-dot"></span>Online &mdash; usually replies instantly</span>
+            </div>
+          </div>
+          <div class="sa-header-actions">
+            <button class="sa-header-btn" id="saClearBtn" title="Clear chat"><i class="bx bx-trash"></i></button>
+            <button class="sa-header-btn" id="saMinimiseBtn" title="Minimise"><i class="bx bx-minus"></i></button>
+            <button class="sa-header-btn sa-close-btn" id="saCloseBtn" title="Close"><i class="bx bx-x"></i></button>
           </div>
         </div>
-        <div class="chat-input">
-          <input
-            type="text"
-            id="user-message"
-            placeholder="Type your message..."
-            autocomplete="off"
-          />
-          <button id="send-message"><i class="bx bx-send"></i></button>
+
+        <!-- Messages Area -->
+        <div class="sa-messages" id="saMessages">
+          <!-- Welcome card injected by JS -->
         </div>
+
+        <!-- Quick Replies -->
+        <div class="sa-quick-replies" id="saQuickReplies">
+          <button class="sa-chip" data-msg="Who is Sakith?"><i class="bx bx-user-circle"></i> Who is Sakith?</button>
+          <button class="sa-chip" data-msg="What services do you offer?"><i class="bx bx-rocket"></i> Services</button>
+          <button class="sa-chip" data-msg="Show me your projects"><i class="bx bx-briefcase"></i> Projects</button>
+          <button class="sa-chip" data-msg="What are your skills?"><i class="bx bx-code-alt"></i> Skills</button>
+          <button class="sa-chip" data-msg="How can I contact you?"><i class="bx bx-send"></i> Contact</button>
+          <button class="sa-chip" data-msg="Tell me about your education"><i class="bx bx-book-reader"></i> Education</button>
+          <button class="sa-chip" data-msg="What are your achievements?"><i class="bx bx-trophy"></i> Awards</button>
+          <button class="sa-chip" data-msg="Are you available for hire?"><i class="bx bx-chat"></i> Hire</button>
+        </div>
+
+        <!-- Input Bar -->
+        <div class="sa-input-bar">
+          <div class="sa-input-wrap">
+            <input
+              type="text"
+              id="saInput"
+              placeholder="Ask me anything about Sakith..."
+              autocomplete="off"
+              maxlength="300"
+            />
+            <span class="sa-input-hint" id="saCharCount"></span>
+          </div>
+          <button class="sa-send-btn" id="saSendBtn" aria-label="Send">
+            <i class="bx bx-send"></i>
+          </button>
+        </div>
+
+        <!-- Powered by footer -->
+        <div class="sa-panel-footer">
+          <span>Powered by Sakith's Knowledge Base</span>
+        </div>
+
       </div>
-      <button class="chat-bot-toggle">
-        <i class="bx bx-message-dots"></i>
-      </button>
     </div>
 
     <!-- scroll reveal  -->
@@ -1169,5 +1137,8 @@
     <!-- mixitup cdn js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
     <script src="script.js"></script>
+    <!-- Sakith Personal Assistant -->
+    <script src="assistant.js"></script>
   </body>
 </html>
+
