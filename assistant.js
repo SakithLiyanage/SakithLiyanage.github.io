@@ -76,7 +76,7 @@
   var KB = {
     identity: {
       name      : 'Sakith Liyanage (Sakith Chanlaka)',
-      title     : 'Associate Software Engineer | Full Stack Developer | SLIIT Undergraduate',
+      title     : 'Software Engineer | Full Stack Developer | SLIIT Undergraduate',
       location  : 'Colombo, Western Province, Sri Lanka',
       company   : 'Data Management Systems (Pvt) Ltd (Aug 2025 \u2013 Present)',
       university: 'SLIIT \u2014 BSc (Hons) in IT, Software Engineering (2023\u20132027)',
@@ -88,33 +88,33 @@
       youtube   : 'https://www.youtube.com/channel/UCV0CYfi3zsP5MEstI24aPMA',
     },
 
-    about: 'Sakith Liyanage is a passionate Full Stack Developer and Associate Software Engineer at Data Management Systems (Pvt) Ltd in Colombo, Sri Lanka. Currently pursuing a BSc in Information Technology at SLIIT, he specialises in intuitive front-end and robust back-end development. A SLIIT Dean\'s List achiever (GPA 3.7+), 1st Runner-Up at SLIIT MS Club Hackathon 2025, Top 10 Finalist at ReviveNation CodeFest 2025 \u2014 with 500+ LinkedIn connections, 20+ GitHub repos, and 400+ contributions.',
+    about: 'Sakith Liyanage is a passionate Software Engineer and Full Stack Developer at Data Management Systems (Pvt) Ltd in Colombo, Sri Lanka. With 4.5+ years of experience and currently pursuing a BSc (Hons) in Information Technology specializing in Software Engineering at SLIIT (Cumulative GPA: 3.55), he specialises in intuitive front-end architectures and robust, cloud-native back-end systems using React, Next.js, and Java Spring Boot. A 3-time SLIIT Dean\'s List achiever (SGPA 3.7+), 1st Runner-Up at SLIIT MS Club Mini Hackathon 2025, and Top 10 Finalist at ReviveNation CodeFest 2025 \u2014 with 500+ LinkedIn connections and 400+ GitHub contributions.',
 
     skills: {
-      languages : 'Java, Kotlin, JavaScript, Python, Dart, C, C++',
-      frontend  : 'HTML5, CSS3, React.js, Bootstrap, Tailwind CSS, SASS',
-      backend   : 'Node.js, Express.js, PHP, Firebase, MongoDB, MySQL, SQL',
+      languages : 'Java, Kotlin, JavaScript (ES6+), TypeScript, Python, Dart, C, C++, SQL',
+      frontend  : 'React.js, Next.js, Vite, Tailwind CSS, Bootstrap, SASS, Framer Motion, HTML5, CSS3',
+      backend   : 'Java Spring Boot, Node.js, Express.js, PostgreSQL, MongoDB, MySQL, RabbitMQ, Docker, Kubernetes, AWS',
       mobile    : 'Flutter (Dart), Android Studio (Kotlin)',
-      tools     : 'Git, GitHub, VS Code, Postman, Android Studio, Terminal',
+      tools     : 'Git, GitHub, Docker, Kubernetes, VS Code, Postman, Android Studio, Terminal',
       design    : 'Figma, Adobe Photoshop, Adobe Illustrator',
-      devops    : 'Docker (basic), Vercel, Render, DigitalOcean',
-      soft      : 'Communication, Time Management, Teamwork, Problem Solving, Leadership',
+      devops    : 'Docker, Kubernetes, AWS, DigitalOcean, Vercel, Render',
+      soft      : 'Problem Solving, Agile Engineering, Cross-functional Collaboration, Clear Technical Communication',
     },
 
     experience: [
       {
-        role   : 'Associate Software Engineer',
+        role   : 'Software Engineer',
         company: 'Data Management Systems (Pvt) Ltd',
-        period : 'August 2025 \u2013 Present \u00b7 Colombo, Sri Lanka \u00b7 Full-time',
-        desc   : 'Building and maintaining enterprise-level software solutions with a focus on full-stack development.',
+        period : 'August 2025 \u2013 Present \u00b7 Colombo, Sri Lanka \u00b7 Full-time (Hybrid)',
+        desc   : 'Software Division \u2014 Architecting enterprise software solutions, designing robust REST APIs, full-stack web development, and cloud services.',
       },
     ],
 
     education: [
       {
-        degree     : 'BSc (Hons) in Information Technology \u2014 Software Engineering',
+        degree     : 'BSc (Hons) in Information Technology \u2014 Software Engineering (Cumulative GPA: 3.55)',
         institution: 'Sri Lanka Institute of Information Technology (SLIIT)',
-        period     : '2023 \u2013 2027 (Currently pursuing)',
+        period     : '2023 \u2013 2027 (Currently pursuing) \u00b7 3x Dean\'s List Honoree',
       },
       {
         degree     : 'G.C.E. A/L \u2014 Business Studies, Accounting, IT (A2C1)',
@@ -129,33 +129,39 @@
     ],
 
     certifications: [
-      'Certificate Course in Web Designing \u2014 University of Kelaniya',
-      'Web Design for Beginners \u2014 University of Moratuwa',
-      'Front-End Web Development \u2014 University of Moratuwa',
+      'AWS Essential Training for Developers \u2014 LinkedIn Learning (May 2026)',
+      'Next.js: Creating and Hosting a Full-Stack Site \u2014 LinkedIn Learning (Feb 2026)',
+      'JavaScript for Beginners Complete Course \u2014 Udemy (Nov 2024)',
+      'Introduction to Java \u2014 Sololearn (Credential: CC-Q0EVVKUS)',
+      'Certificate Course in Web Designing \u2014 University of Kelaniya (WD28/009)',
+      'Certificate Course in Graphic Designing \u2014 University of Kelaniya (GD16/052)',
       'The Complete HTML & CSS Course \u2014 Udemy',
-      'Certificate Course in Graphic Designing \u2014 University of Kelaniya',
-      'Python for Beginners \u2014 University of Moratuwa',
-      'AI/ML Engineer Stage 1 \u2014 SLIIT',
-      'Project Management Foundations \u2014 LinkedIn Learning',
+      'Python for Beginners \u2014 University of Moratuwa (EIvEg3O7o2)',
+      'Web Design for Beginners \u2014 University of Moratuwa (QMODdWAeOJ)',
+      'Front-End Web Development \u2014 University of Moratuwa',
+      'Responsive Web Design Course, HTML & CSS \u2014 Sololearn',
       'Problem Solving (Intermediate) \u2014 HackerRank',
-      'MongoDB Node.js Developer Path \u2014 MongoDB',
+      'Project Management Foundations \u2014 LinkedIn Learning',
     ],
 
     awards: [
-      { title: "Dean's List",     org: 'SLIIT', detail: 'Year 1 Sem 2 & Year 2 Sem 1 \u2014 GPA 3.7+' },
-      { title: '1st Runners-Up',  org: 'SLIIT MS Club Mini Hackathon 2025', detail: 'Competitive programming & development' },
-      { title: 'Top 10 Finalist', org: 'ReviveNation CodeFest 2025', detail: 'National-level hackathon competition' },
+      { title: "Dean's List (3x Honoree)", org: 'SLIIT', detail: 'Year 1 Sem 2, Year 2 Sem 1 & Year 2 Sem 2 \u2014 SGPA 3.7+' },
+      { title: '1st Runners-Up',          org: 'SLIIT MS Club Mini Hackathon 2025', detail: 'Team Nexor \u2014 prototype engineering & rapid problem solving' },
+      { title: 'Top 10 Finalist',         org: 'ReviveNation CodeFest 2025', detail: 'e-Grama digital certificate platform' },
     ],
 
     services: [
-      { name: 'Web Development',   desc: 'Dynamic, responsive, full-stack web apps (React, Node.js, Express, MongoDB/MySQL)' },
-      { name: 'Graphic Designing', desc: 'Logos, brand identities, package design, marketing materials (Photoshop, Illustrator)' },
-      { name: 'UI/UX Design',      desc: 'Intuitive, user-centric interface design (Figma)' },
-      { name: 'Digital Marketing', desc: 'Data-driven campaigns, social media strategies, SEO fundamentals' },
+      { name: 'Web Development',   desc: 'Dynamic, responsive, full-stack web apps (React, Next.js, Node.js, Spring Boot, MongoDB/PostgreSQL)' },
+      { name: 'Cloud & Backend',   desc: 'Microservices architecture, REST APIs, Docker, RabbitMQ, PostgreSQL, AWS' },
+      { name: 'UI/UX Design',      desc: 'Intuitive, user-centric interface design and modern design systems (Figma)' },
+      { name: 'Mobile App Dev',    desc: 'Cross-platform mobile applications with Flutter and Android' },
     ],
 
     projects: [
-      { name: 'BizNest',       type: 'Mobile App', desc: 'Entrepreneurial toolkit mobile app for business management and growth.' },
+      { name: 'SynapseCare',   type: 'Cloud / Web', desc: 'Cloud-native healthcare platform with Java Spring Boot microservices, PostgreSQL, and RabbitMQ.' },
+      { name: 'TrustFund',     type: 'Web',        desc: 'NGO donation transparency tracker with AI affinity matching (Gemini) and trust score algorithm.' },
+      { name: 'NovaPOS',       type: 'Web',        desc: 'AI-powered Point of Sale system with barcode scanning, chatbot assistant, and analytics.' },
+      { name: 'BizNest',       type: 'Mobile App', desc: 'Entrepreneurial toolkit mobile app built with Flutter, Dart, and OpenRouter AI.' },
       { name: 'UrbanCare',     type: 'Web',        desc: 'Smart Healthcare Management System \u2014 CSSE module group project.' },
       { name: 'Ripple Studio', type: 'Web',        desc: 'Full-stack recording studio booking platform with real-time discovery and payments.' },
       { name: 'e-Grama',       type: 'Web',        desc: 'Digital certificate issuance platform for Sri Lanka \u2014 ReviveNation Codefest finalist.' },
@@ -179,7 +185,7 @@
 
     github: {
       url          : 'https://github.com/SakithLiyanage',
-      repos        : '20+',
+      repos        : '25+',
       contributions: '400+',
       focus        : 'JavaScript frameworks, API development, MERN stack, cloud solutions',
     },

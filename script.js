@@ -194,8 +194,9 @@ ScrollReveal().reveal('.allServices, .portfolio-gallery, footer, .img-hero, .tec
 const typingText = document.querySelector(".typing-text");
 if (typingText) {
     const roles = [
-        "Associate Software Engineer",
+        "Software Engineer",
         "Full Stack Developer",
+        "Cloud & Backend Architect",
         "UI/UX Designer",
         "Open Source Contributor"
     ];
