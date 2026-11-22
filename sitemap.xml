@@ -1,15 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
     <loc>https://sakith.me/</loc>
-    <lastmod>2026-11-22T07:20:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-22T08:20:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://sakith.me/img/about.png</image:loc>
+      <image:title>Sakith Liyanage — Software Engineer &amp; Full Stack Developer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sakith.me/img/itz%20me.jpg</image:loc>
+      <image:title>Portrait of Sakith Liyanage (Sakith Chanlaka)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sakith.me/img/solvance.jpg</image:loc>
+      <image:title>Solvance — Smart Solar Microgrid Trading System</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sakith.me/img/heart-ui.png</image:loc>
+      <image:title>HEART — Mobile Robustness Testing Framework (J26-SE-334)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sakith.me/img/synapsecare.jpg</image:loc>
+      <image:title>SynapseCare — Cloud-Native Healthcare Platform</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sakith.me/img/trustfund.jpg</image:loc>
+      <image:title>TrustFund — NGO Donation &amp; Transparency Tracker</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sakith.me/img/novapos.jpg</image:loc>
+      <image:title>NovaPOS — AI-Powered Point of Sale System</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sakith.me/img/yieldcore.png</image:loc>
+      <image:title>YieldCore Systems — Data Science Agency Website</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sakith.me/img/resume.pdf</loc>
+    <lastmod>2026-11-22T08:20:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://sakith.me/llms.txt</loc>
+    <lastmod>2026-11-22T08:20:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>

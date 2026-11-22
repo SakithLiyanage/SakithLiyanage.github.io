@@ -1,5 +1,5 @@
-# robots.txt
+# robots.txt — https://sakith.me
 User-agent: *
-Disallow: 
+Allow: /
 
 Sitemap: https://sakith.me/sitemap.xml

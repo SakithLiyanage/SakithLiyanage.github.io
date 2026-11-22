@@ -1,0 +1,16 @@
+{
+  "name": "Sakith Liyanage — Software Engineer Portfolio",
+  "short_name": "Sakith.dev",
+  "description": "Portfolio of Sakith Liyanage (Sakith Chanlaka) — Software Engineer & Full Stack Developer in Sri Lanka.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050510",
+  "theme_color": "#050510",
+  "icons": [
+    {
+      "src": "img/about.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
