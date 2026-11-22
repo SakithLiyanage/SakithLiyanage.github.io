@@ -88,23 +88,24 @@
       youtube   : 'https://www.youtube.com/channel/UCV0CYfi3zsP5MEstI24aPMA',
     },
 
-    about: 'Sakith Liyanage is a passionate Software Engineer and Full Stack Developer at Data Management Systems (Pvt) Ltd in Colombo, Sri Lanka. With 4.5+ years of experience and currently pursuing a BSc (Hons) in Information Technology specializing in Software Engineering at SLIIT (Cumulative GPA: 3.55), he specialises in intuitive front-end architectures and robust, cloud-native back-end systems using React, Next.js, and Java Spring Boot. A 3-time SLIIT Dean\'s List achiever (SGPA 3.7+), 1st Runner-Up at SLIIT MS Club Mini Hackathon 2025, and Top 10 Finalist at ReviveNation CodeFest 2025 \u2014 with 500+ LinkedIn connections and 400+ GitHub contributions.',
+    about: 'Sakith Liyanage is a passionate Software Engineer and Full Stack Developer at Data Management Systems (Pvt) Ltd (Division 2) in Colombo, Sri Lanka. With 5+ years of coding experience and currently pursuing a BSc (Hons) in Information Technology specializing in Software Engineering at SLIIT (Cumulative GPA: 3.55), he builds intuitive front-end architectures, enterprise .NET/Spring Boot backends, mobile apps, and AI-powered systems. A 3-time SLIIT Dean\'s List achiever (SGPA 3.7+), 1st Runner-Up at SLIIT MS Club Mini Hackathon 2025, and Top 10 Finalist at ReviveNation CodeFest 2025 \u2014 with 500+ LinkedIn connections, 42 public GitHub repositories, and 1,650+ contributions in the past year.',
 
     skills: {
-      languages : 'Java, Kotlin, JavaScript (ES6+), TypeScript, Python, Dart, C, C++, SQL',
-      frontend  : 'React.js, Next.js, Vite, Tailwind CSS, Bootstrap, SASS, Framer Motion, HTML5, CSS3',
-      backend   : 'Java Spring Boot, Node.js, Express.js, PostgreSQL, MongoDB, MySQL, RabbitMQ, Docker, Kubernetes, AWS',
-      mobile    : 'Flutter (Dart), Android Studio (Kotlin)',
-      tools     : 'Git, GitHub, Docker, Kubernetes, VS Code, Postman, Android Studio, Terminal',
+      languages : 'Java, TypeScript, JavaScript (ES6+), C#, Kotlin, Python, Dart, C, C++, SQL',
+      frontend  : 'React.js, Next.js, Vite, Tailwind CSS, Shadcn UI, Bootstrap, SASS, Framer Motion, HTML5, CSS3',
+      backend   : 'Java Spring Boot, ASP.NET Core (.NET 8), Node.js, Express.js, Prisma, PostgreSQL, MongoDB, MySQL, RabbitMQ, Redis, Docker, Kubernetes, AWS',
+      mobile    : 'Flutter (Dart), Android Studio (Java / Kotlin)',
+      ai        : 'Google Gemini, Groq (Llama 3), OpenRouter, OCR (Tesseract.js), Qwen2-VL, Sentence-BERT',
+      tools     : 'Git, GitHub, Docker, Kubernetes, IIS, VS Code, Postman, Android Studio, Terminal',
       design    : 'Figma, Adobe Photoshop, Adobe Illustrator',
       devops    : 'Docker, Kubernetes, AWS, DigitalOcean, Vercel, Render',
-      soft      : 'Problem Solving, Agile Engineering, Cross-functional Collaboration, Clear Technical Communication',
+      soft      : 'Technical Leadership, Problem Solving, Agile Engineering, Cross-functional Collaboration, Clear Communication',
     },
 
     experience: [
       {
         role   : 'Software Engineer',
-        company: 'Data Management Systems (Pvt) Ltd',
+        company: 'Data Management Systems (Pvt) Ltd (Division 2)',
         period : 'August 2025 \u2013 Present \u00b7 Colombo, Sri Lanka \u00b7 Full-time (Hybrid)',
         desc   : 'Software Division \u2014 Architecting enterprise software solutions, designing robust REST APIs, full-stack web development, and cloud services.',
       },
@@ -114,23 +115,20 @@
       {
         degree     : 'BSc (Hons) in Information Technology \u2014 Software Engineering (Cumulative GPA: 3.55)',
         institution: 'Sri Lanka Institute of Information Technology (SLIIT)',
-        period     : '2023 \u2013 2027 (Currently pursuing) \u00b7 3x Dean\'s List Honoree',
+        period     : '2023 \u2013 2027 (Currently pursuing) \u00b7 3x Dean\'s List Honoree \u00b7 MS Club, SLIIT FOSS, Rotaract',
       },
       {
-        degree     : 'G.C.E. A/L \u2014 Business Studies, Accounting, IT (A2C1)',
+        degree     : 'G.C.E. A/L \u2014 Business Studies, Accounting, IT (A2C1) & President, Commerce Society',
         institution: 'Mahinda Rajapaksha College, Homagama',
-        period     : '2016 \u2013 2022',
-      },
-      {
-        degree     : 'G.C.E. O/L \u2014 A7 B2',
-        institution: 'Mahinda Rajapaksha College, Homagama',
-        period     : '2016 \u2013 2022',
+        period     : '2016 \u2013 2022 \u00b7 G.C.E. O/L \u2014 A7 B2',
       },
     ],
 
     certifications: [
       'AWS Essential Training for Developers \u2014 LinkedIn Learning (May 2026)',
       'Next.js: Creating and Hosting a Full-Stack Site \u2014 LinkedIn Learning (Feb 2026)',
+      'AI/ML Engineer \u2013 Stage 1 \u2014 SLIIT',
+      'MongoDB Node.js Developer Path \u2014 MongoDB',
       'JavaScript for Beginners Complete Course \u2014 Udemy (Nov 2024)',
       'Introduction to Java \u2014 Sololearn (Credential: CC-Q0EVVKUS)',
       'Certificate Course in Web Designing \u2014 University of Kelaniya (WD28/009)',
@@ -151,43 +149,56 @@
     ],
 
     services: [
-      { name: 'Web Development',   desc: 'Dynamic, responsive, full-stack web apps (React, Next.js, Node.js, Spring Boot, MongoDB/PostgreSQL)' },
-      { name: 'Cloud & Backend',   desc: 'Microservices architecture, REST APIs, Docker, RabbitMQ, PostgreSQL, AWS' },
-      { name: 'UI/UX Design',      desc: 'Intuitive, user-centric interface design and modern design systems (Figma)' },
-      { name: 'Mobile App Dev',    desc: 'Cross-platform mobile applications with Flutter and Android' },
+      { name: 'Web Development',            desc: 'Dynamic, responsive, full-stack web apps (React, Next.js, TypeScript, Node.js, Spring Boot, ASP.NET Core)' },
+      { name: 'Cloud & Backend Architecture', desc: 'Microservices, REST APIs, PostgreSQL, MongoDB, RabbitMQ, Docker, Kubernetes, AWS' },
+      { name: 'Mobile App Development',     desc: 'Cross-platform Flutter (Dart) and Native Android (Kotlin/Java) mobile applications' },
+      { name: 'UI/UX & Brand Design',       desc: 'Intuitive user interfaces, Figma design systems, and brand identity visuals' },
     ],
 
     projects: [
-      { name: 'SynapseCare',   type: 'Cloud / Web', desc: 'Cloud-native healthcare platform with Java Spring Boot microservices, PostgreSQL, and RabbitMQ.' },
-      { name: 'TrustFund',     type: 'Web',        desc: 'NGO donation transparency tracker with AI affinity matching (Gemini) and trust score algorithm.' },
-      { name: 'NovaPOS',       type: 'Web',        desc: 'AI-powered Point of Sale system with barcode scanning, chatbot assistant, and analytics.' },
-      { name: 'BizNest',       type: 'Mobile App', desc: 'Entrepreneurial toolkit mobile app built with Flutter, Dart, and OpenRouter AI.' },
-      { name: 'UrbanCare',     type: 'Web',        desc: 'Smart Healthcare Management System \u2014 CSSE module group project.' },
-      { name: 'Ripple Studio', type: 'Web',        desc: 'Full-stack recording studio booking platform with real-time discovery and payments.' },
-      { name: 'e-Grama',       type: 'Web',        desc: 'Digital certificate issuance platform for Sri Lanka \u2014 ReviveNation Codefest finalist.' },
-      { name: 'LangBridge',    type: 'Web',        desc: 'Full-stack Sinhala/English/Tamil translator with AI, voice, quizzes & community.' },
-      { name: 'CreativeForge', type: 'Web',        desc: 'AI-powered creative studio for documents, images, QR codes, chatbot & more \u2014 MERN Stack.' },
-      { name: 'LMS',           type: 'Web',        desc: 'MERN-based Learning Management System with role-based access, grading & notifications.' },
-      { name: 'BuildMart',     type: 'Web',        desc: 'Auction and procurement platform for the construction industry \u2014 MERN & Tailwind.' },
-      { name: 'TradeSphere',   type: 'Web',        desc: 'Full-stack MERN E-Commerce marketplace for buying and selling.' },
-      { name: 'ConnectHub',    type: 'Web',        desc: 'Modern social media web application with responsive design.' },
-      { name: 'Eventix',       type: 'Mobile',     desc: 'Event ticket booking mobile app with smooth discovery and management.' },
-      { name: 'FinFlow',       type: 'Mobile',     desc: 'Kotlin-based financial tracking app for expense management and budget insights.' },
-      { name: 'ToneGallery',   type: 'Web',        desc: 'Java-based online music store with admin panel and payment simulation.' },
-      { name: 'GalleryGavel',  type: 'Web',        desc: 'Online art marketplace combining e-commerce and auctions \u2014 PHP, MySQL, JS.' },
-      { name: 'SriCare',       type: 'Web',        desc: 'Patient-centric healthcare services web platform.' },
-      { name: 'VN Sports',     type: 'Web',        desc: 'Sports fashion & dressings e-commerce website redesign.' },
-      { name: 'Orbiter Shoes', type: 'Web',        desc: 'Cutting-edge footwear e-commerce showcase website.' },
-      { name: 'Rapid Cart',    type: 'Web',        desc: 'Sleek, fast-loading online retail shopping platform.' },
-      { name: 'ColorScape IT', type: 'Web',        desc: 'IT solutions company website with vibrant, creative design.' },
-      { name: 'Inland Coffee', type: 'Branding',   desc: 'Package design and logo for New Inland Coffee brand.' },
+      { name: 'Solvance',         type: 'Web / Mobile / .NET', desc: 'Smart Solar Microgrid Trading System (Group Leader) with ASP.NET Core, React, Android Java & Google Maps.' },
+      { name: 'HEART (J26-SE-334)', type: 'Research / AI',     desc: 'Human Behavior-Aware Robustness Testing Framework for mobile apps using Qwen2-VL & Sentence-BERT.' },
+      { name: 'BizPilot AI',      type: 'Full-Stack / AI',     desc: 'Multi-platform AI Business OS monorepo (TypeScript, Express, Prisma, React, Flutter, Groq Llama 3, WhatsApp).' },
+      { name: 'BuildMart Secure', type: 'Web / Security',      desc: 'Security-hardened contractor marketplace remediating 25 CWE vulnerabilities + Google OAuth 2.0 / OIDC.' },
+      { name: 'SynapseCare',      type: 'Cloud / Web',         desc: 'Cloud-native healthcare platform with Java Spring Boot microservices, PostgreSQL, and RabbitMQ.' },
+      { name: 'TrustFund',        type: 'Web',                 desc: 'NGO donation transparency tracker with AI affinity matching (Gemini) and trust score algorithm.' },
+      { name: 'NovaPOS',          type: 'Web',                 desc: 'AI-powered Point of Sale system with barcode scanning, chatbot assistant, and analytics.' },
+      { name: 'BizNest',          type: 'Mobile App',          desc: 'Entrepreneurial toolkit mobile app built with Flutter, Dart, and OpenRouter AI.' },
+      { name: 'UrbanCare',        type: 'Web',                 desc: 'Smart Healthcare Management System \u2014 CSSE module group project.' },
+      { name: 'Ripple Studio',    type: 'Web',                 desc: 'Full-stack recording studio booking platform with real-time discovery and payments.' },
+      { name: 'e-Grama',          type: 'Web',                 desc: 'Digital certificate issuance platform for Sri Lanka \u2014 ReviveNation Codefest finalist.' },
+      { name: 'LangBridge',       type: 'Web',                 desc: 'Full-stack Sinhala/English/Tamil translator with AI, voice, quizzes & community.' },
+      { name: 'CreativeForge',    type: 'Web',                 desc: 'AI-powered creative studio for documents, images, QR codes, chatbot & more \u2014 MERN Stack.' },
+      { name: 'LMS',              type: 'Web',                 desc: 'MERN-based Learning Management System with role-based access, grading & notifications.' },
+      { name: 'YieldCore Systems', type: 'Web',                desc: 'Modern data science agency platform built with React 18, Tailwind CSS, and Framer Motion.' },
+      { name: 'TuneLink',         type: 'Web',                 desc: 'Full-stack music & studio booking platform built with React 18, Tailwind CSS, Node.js, and MongoDB.' },
+      { name: 'BuildMart',        type: 'Web',                 desc: 'Auction and procurement platform for the construction industry \u2014 MERN & Tailwind.' },
+      { name: 'TradeSphere',      type: 'Web',                 desc: 'Full-stack MERN E-Commerce marketplace for buying and selling.' },
+      { name: 'Employee Mgmt (.NET 8)', type: 'Web',           desc: 'CRUD Employee Management System built with ASP.NET Core Razor Pages, EF Core & PostgreSQL.' },
+      { name: 'Smart Board Oil Lamp', type: 'Web',             desc: 'Interactive 18-lamp ceremony web app for Mahinda Rajapaksha College Homagama.' },
+      { name: 'LankaSpire',       type: 'Web',                 desc: 'Sri Lankan cinnamon products e-commerce website built with HTML, SCSS, and JS.' },
+      { name: 'CashWire',         type: 'Mobile',              desc: 'Kotlin Android smart money management app with budgeting, charts, and LKR goals.' },
+      { name: 'SwiftRide',        type: 'Mobile',              desc: 'Kotlin Android ride & transport booking mobile application.' },
+      { name: 'Pixelite',         type: 'Web',                 desc: 'Photography studio showcase and booking website.' },
+      { name: 'SL Commerce Wiki', type: 'Web',                 desc: 'Open-source G.C.E. A/L Commerce stream learning portal.' },
+      { name: 'ConnectHub',       type: 'Web',                 desc: 'Modern social media web application with responsive design.' },
+      { name: 'Eventix',          type: 'Mobile',              desc: 'Event ticket booking mobile app with smooth discovery and management.' },
+      { name: 'FinFlow',          type: 'Mobile',              desc: 'Kotlin-based financial tracking app for expense management and budget insights.' },
+      { name: 'ToneGallery',      type: 'Web',                 desc: 'Java-based online music store with admin panel and payment simulation.' },
+      { name: 'GalleryGavel',     type: 'Web',                 desc: 'Online art marketplace combining e-commerce and auctions \u2014 PHP, MySQL, JS.' },
+      { name: 'SriCare',          type: 'Web',                 desc: 'Patient-centric healthcare services web platform.' },
+      { name: 'VN Sports',        type: 'Web',                 desc: 'Sports fashion & dressings e-commerce website redesign.' },
+      { name: 'Orbiter Shoes',    type: 'Web',                 desc: 'Cutting-edge footwear e-commerce showcase website.' },
+      { name: 'Rapid Cart',       type: 'Web',                 desc: 'Sleek, fast-loading online retail shopping platform.' },
+      { name: 'ColorScape IT',    type: 'Web',                 desc: 'IT solutions company website with vibrant, creative design.' },
+      { name: 'Inland Coffee',    type: 'Branding',            desc: 'Package design and logo for New Inland Coffee brand.' },
     ],
 
     github: {
       url          : 'https://github.com/SakithLiyanage',
-      repos        : '25+',
-      contributions: '400+',
-      focus        : 'JavaScript frameworks, API development, MERN stack, cloud solutions',
+      repos        : '42 Public Repositories',
+      contributions: '1,650+ in the last year (2,700+ since 2023)',
+      focus        : 'Full-stack TypeScript/MERN, Java Spring Boot, C# ASP.NET Core, Flutter, and AI systems',
     },
 
     linkedin: {
@@ -302,8 +313,9 @@
         return '**Sakith\'s Technical Skills:**\n\n' +
           E.screen + ' **Languages:** ' + s.languages + '\n' +
           E.art    + ' **Frontend:** '  + s.frontend + '\n' +
-          E.gear   + ' **Backend:** '   + s.backend + '\n' +
+          E.gear   + ' **Backend & Cloud:** ' + s.backend + '\n' +
           E.phone  + ' **Mobile:** '    + s.mobile + '\n' +
+          E.rocket + ' **AI & ML:** '   + s.ai + '\n' +
           E.tools  + ' **Tools & DevOps:** ' + s.tools + '\n' +
           E.masks  + ' **Design:** '    + s.design + '\n' +
           E.handsh + ' **Soft Skills:** ' + s.soft;
@@ -371,7 +383,7 @@
         return E.bye + ' Goodbye! Have a wonderful day. Come back anytime \u2014 I\'ll be here! ' + E.rocket;
 
       case 'age':
-        return 'Sakith was born in **2004**, making him around **21 years old**. He graduated A/L in 2022 and started his BSc at SLIIT in 2023.';
+        return 'Sakith was born in **2004**, making him **22 years old**. He completed his A/Ls in 2022 and began his BSc (Hons) in Software Engineering at SLIIT in 2023.';
 
       case 'location':
         return 'Sakith is **based in Colombo, Western Province, Sri Lanka** ' + E.lk + '. He works both locally and remotely on projects worldwide.';

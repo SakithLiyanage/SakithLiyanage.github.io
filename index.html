@@ -16,9 +16,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="title" content="Sakith Liyanage | Software Engineer &amp; Full Stack Developer" />
   <meta name="description"
-    content="Portfolio of Sakith Liyanage (Sakith Chanlaka) — Software Engineer at Data Management Systems (Pvt) Ltd and SLIIT Software Engineering undergraduate. 4.5+ years building scalable full-stack web applications, cloud systems, and AI-driven platforms." />
+    content="Portfolio of Sakith Liyanage (Sakith Chanlaka) — Software Engineer at Data Management Systems (Pvt) Ltd and SLIIT Software Engineering undergraduate. 5+ years building scalable full-stack web applications, .NET & Spring Boot backends, mobile apps, and AI-driven platforms." />
   <meta name="keywords"
-    content="Sakith Chanlaka,Sakith Liyanage,Sakith,Sakith SLIIT,Sakith DMS,G.L.S. Chanlaka,Sri Lankan software engineer,Software Engineer Sri Lanka,Full Stack Developer Sri Lanka,Java Spring Boot,Next.js,React,Cloud Native" />
+    content="Sakith Chanlaka,Sakith Liyanage,Sakith,Sakith SLIIT,Sakith DMS,G.L.S. Chanlaka,Sri Lankan software engineer,Software Engineer Sri Lanka,Full Stack Developer Sri Lanka,Java Spring Boot,ASP.NET Core,Next.js,React,TypeScript,Flutter,Cloud Native" />
   <meta name="robots" content="index, follow" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="language" content="English" />
@@ -116,14 +116,20 @@
           "Software Engineering",
           "Full Stack Development",
           "Java Spring Boot",
+          "C# / ASP.NET Core",
           "React",
           "Next.js",
+          "TypeScript",
           "Node.js",
+          "Flutter",
           "PostgreSQL",
           "MongoDB",
           "RabbitMQ",
           "Docker",
+          "Kubernetes",
           "Cloud Computing",
+          "AI / LLM Integration",
+          "Application Security",
           "UI/UX Design"
         ],
         "sameAs": [
@@ -143,7 +149,7 @@
             "name": "Who is Sakith Chanlaka?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sakith Chanlaka, formally known as G.L.S. Chanlaka or Sakith Liyanage, is a Sri Lankan Software Engineer at Data Management Systems (Pvt) Ltd and a BSc (Hons) Software Engineering undergraduate at SLIIT with 4.5+ years of experience in full-stack development."
+              "text": "Sakith Chanlaka, formally known as G.L.S. Chanlaka or Sakith Liyanage, is a Sri Lankan Software Engineer at Data Management Systems (Pvt) Ltd and a BSc (Hons) Software Engineering undergraduate at SLIIT with 5+ years of coding experience in full-stack, mobile, cloud, and AI-driven development."
             }
           },
           {
@@ -171,10 +177,10 @@
         "@type": "ItemList",
         "name": "Services",
         "itemListElement": [
-          {"@type": "Service", "name": "Web Development", "description": "Dynamic, responsive websites and robust back-end solutions."},
-          {"@type": "Service", "name": "Graphic Designing", "description": "Brand identities and marketing materials with compelling visuals."},
-          {"@type": "Service", "name": "UI/UX Design", "description": "Intuitive, user-centric interfaces and experiences."},
-          {"@type": "Service", "name": "Digital Marketing", "description": "Data-driven campaigns and social media strategies to grow reach."}
+          {"@type": "Service", "name": "Web Development", "description": "Dynamic, responsive full-stack web applications using React, Next.js, TypeScript, Node.js, Spring Boot, and ASP.NET Core."},
+          {"@type": "Service", "name": "Cloud & Backend Architecture", "description": "Microservices, REST APIs, PostgreSQL, MongoDB, RabbitMQ, Docker, Kubernetes, and AWS cloud solutions."},
+          {"@type": "Service", "name": "Mobile App Development", "description": "Cross-platform Flutter (Dart) and Native Android (Kotlin/Java) mobile applications."},
+          {"@type": "Service", "name": "UI/UX & Brand Design", "description": "Intuitive, user-centric interfaces, Figma design systems, and brand visual identities."}
         ]
       }
     </script>
@@ -195,21 +201,40 @@
 </head>
 
 <body>
+  <!-- Scroll Progress Bar, Aurora Mesh & Custom Magnetic Cursor -->
+  <div id="scroll-progress-bar" aria-hidden="true"></div>
+  <div class="aurora-bg" aria-hidden="true">
+    <div class="aurora-orb orb-1"></div>
+    <div class="aurora-orb orb-2"></div>
+    <div class="aurora-orb orb-3"></div>
+  </div>
+  <div class="cyber-grid" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"><span class="cursor-ring-label"></span></div>
   <!-- Particle Canvas -->
   <canvas id="particle-canvas"></canvas>
   <div class="overlay"></div>
 
   <header id="header">
-    <a href="#" class="logo"><span>S</span>akith <span>L</span>iyanage</a>
+    <a href="#home" class="logo code-logo"><span class="logo-bracket">&lt;</span>Sakith<span class="logo-ext">.dev</span><span class="logo-bracket"> /&gt;</span></a>
     <ul class="navlist">
+      <span class="nav-pill" id="navPill" aria-hidden="true"></span>
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#tech-skills">Stack</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#awards">Awards</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="right-header">
-      <a href="https://api.whatsapp.com/send?phone=94769092755" class="btn">Let's chat <i
+      <button type="button" class="cmd-trigger" id="cmdTrigger" aria-label="Open quick command palette (Ctrl+K)">
+        <i class="bx bx-terminal"></i>
+        <span class="cmd-trigger-text">search</span>
+        <kbd>Ctrl K</kbd>
+      </button>
+      <a href="https://api.whatsapp.com/send?phone=94769092755" target="_blank" rel="noopener noreferrer" class="btn">Let's chat <i
           class="bx bx-message-dots"></i></a>
       <div class="menu-icon">
         <div class="bar"></div>
@@ -220,76 +245,111 @@
   <!-- ==================== HOME ==================== -->
   <section class="home" id="home">
     <div class="hero-info">
-      <div class="hero-eyebrow">
+      <div class="hero-eyebrow mono-pill">
         <span class="dot"></span>
-        Software Engineer · Open to opportunities
+        <span>~/sakith.me</span>
+        <span class="eyebrow-sep">&middot;</span>
+        <span class="eyebrow-branch"><i class="bx bx-git-branch"></i> main</span>
+        <span class="eyebrow-sep">&middot;</span>
+        <span class="eyebrow-status">200 OK · Open to work</span>
       </div>
       <div class="title-container">
         <h1>Hi, I'm <span class="name-accent">Sakith<br>Liyanage</span></h1>
         <div class="text-animate">
-          <h2 style="font-size: 30px">And I'm a <span class="typing-text"></span></h2>
+          <h2 style="font-size: 30px">And I'm a <span class="typing-text">Software Engineer</span></h2>
         </div>
       </div>
 
       <p>
-        Full-stack software engineer with 4.5+ years of experience crafting intuitive
-        user interfaces and scalable back-end architectures. Proven expertise in building modern,
-        responsive applications using React, Next.js, and Java Spring Boot with cloud-native technologies.
+        Full-stack software engineer with 5+ years of experience crafting intuitive
+        user interfaces, scalable enterprise back-ends, mobile apps, and AI-powered systems
+        using React, Next.js, TypeScript, Java Spring Boot, ASP.NET Core, and cloud-native tooling.
       </p>
 
       <div class="btn-box">
         <a href="mailto:sakithchanlaka2004@gmail.com" class="btn">Hire Me Now <i class="bx bx-right-arrow-alt"></i></a>
-        <a href="img/resume.pdf" target="_blank" class="btn d-CV">Download CV <i class="bx bx-download"></i></a>
+        <a href="img/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn d-CV">Download CV <i class="bx bx-download"></i></a>
       </div>
 
       <div class="social-media">
         <div class="bg-icon">
-          <a href="https://www.linkedin.com/in/sakith-chanlaka/" aria-label="LinkedIn"><i
+          <a href="https://www.linkedin.com/in/sakith-chanlaka/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
               class="bx bxl-linkedin"></i></a>
         </div>
         <div class="bg-icon">
-          <a href="https://github.com/SakithLiyanage" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="https://github.com/SakithLiyanage" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bx bxl-github"></i></a>
         </div>
         <div class="bg-icon">
-          <a href="https://api.whatsapp.com/send?phone=94769092755" aria-label="WhatsApp"><i
+          <a href="https://api.whatsapp.com/send?phone=94769092755" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
               class="bx bxl-whatsapp"></i></a>
         </div>
         <div class="bg-icon">
-          <a href="https://www.youtube.com/channel/UCV0CYfi3zsP5MEstI24aPMA" aria-label="YouTube"><i
+          <a href="https://www.youtube.com/channel/UCV0CYfi3zsP5MEstI24aPMA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i
               class="bx bxl-youtube"></i></a>
         </div>
       </div>
 
       <div class="hero-stats">
         <div class="stat-item">
-          <span class="stat-number">4.5+</span>
+          <span class="stat-number">5+</span>
           <span class="stat-label">Years Exp</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number">25+</span>
-          <span class="stat-label">Projects</span>
+          <span class="stat-number">42+</span>
+          <span class="stat-label">GitHub Repos</span>
         </div>
         <div class="stat-item">
           <span class="stat-number">500+</span>
           <span class="stat-label">LinkedIn Connects</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number">400+</span>
-          <span class="stat-label">GitHub Commits</span>
+          <span class="stat-number">1,650+</span>
+          <span class="stat-label">Yearly Commits</span>
         </div>
       </div>
     </div>
 
-    <div class="img-hero">
-      <div class="img-hero-wrapper">
+    <div class="img-hero hero-right-stack">
+      <div class="img-hero-wrapper" data-tilt="subtle">
         <img src="img/itz me.jpg" alt="Portrait of Sakith Liyanage, Software Engineer &amp; Full Stack Developer" decoding="async" />
         <div class="img-hero-ring"></div>
-      </div>
-      <div class="rotate-text">
-        <div class="text">
-          <p></p>
+        <div class="hero-float-badge badge-1">
+          <i class="bx bx-code-curly"></i>
+          <span>Spring Boot &amp; .NET 8</span>
         </div>
-        <span><i></i></span>
+        <div class="hero-float-badge badge-2">
+          <i class="bx bx-brain"></i>
+          <span>React · Next.js · AI</span>
+        </div>
+        <div class="hero-float-badge badge-3">
+          <i class="bx bx-trophy"></i>
+          <span>3&times; SLIIT Dean's List</span>
+        </div>
+      </div>
+
+      <!-- Interactive Engineering Terminal -->
+      <div class="hero-terminal" id="heroTerminal" aria-label="Interactive developer terminal">
+        <div class="term-chrome">
+          <div class="term-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <span class="term-title">sakith@colombo: ~/portfolio &mdash; zsh</span>
+          <span class="term-badge">LIVE CLI</span>
+        </div>
+        <div class="term-quick-cmds" id="termQuickCmds">
+          <button type="button" data-cmd="whoami">whoami</button>
+          <button type="button" data-cmd="stack">stack</button>
+          <button type="button" data-cmd="projects">projects</button>
+          <button type="button" data-cmd="neofetch">neofetch</button>
+          <button type="button" data-cmd="help">help</button>
+        </div>
+        <div class="term-body" id="termBody"></div>
+        <div class="term-input-row">
+          <span class="term-prompt"><span class="tp-user">sakith</span><span class="tp-sep">@</span><span class="tp-host">dev</span><span class="tp-path">:~$</span></span>
+          <input type="text" id="termInput" placeholder="type 'help', 'stack', 'projects', 'neofetch'..." autocomplete="off" spellcheck="false" aria-label="Terminal command input" />
+        </div>
       </div>
     </div>
   </section>
@@ -306,71 +366,81 @@
         <div class="about-img-decoration2"></div>
       </div>
       <div class="about-content">
-        <div class="section-tag">Who I Am</div>
+        <div class="section-tag">01 // WHO_I_AM</div>
         <h2 class="heading">About Me</h2>
         <h3>Software Engineer · Full Stack Developer · SLIIT Undergraduate</h3>
         <p>
-          Software Engineer at <strong style="color:#a78bfa">Data Management Systems (Pvt) Ltd</strong>,
+          Software Engineer at <strong style="color:#a78bfa">Data Management Systems (Pvt) Ltd</strong> (Division 2),
           currently pursuing a BSc (Hons) in Information Technology specializing in Software Engineering at SLIIT
-          (Cumulative GPA: 3.55). With 4.5+ years of experience, I specialize in crafting intuitive front-end
-          experiences and robust, cloud-native back-end architectures using React, Next.js, Java Spring Boot, and Docker.
+          (Cumulative GPA: 3.55). With 5+ years of coding experience, I architect intuitive front-end
+          experiences, enterprise .NET &amp; Java Spring Boot backends, mobile apps, and AI-driven platforms &mdash;
+          recently building systems such as <strong style="color:#22d3ee">Solvance</strong>,
+          <strong style="color:#22d3ee">HEART (J26-SE-334)</strong>, and <strong style="color:#22d3ee">BizPilot AI</strong>.
           A 3-time SLIIT Dean's List achiever (SGPA &gt; 3.70), 1st Runner-Up at SLIIT MS Club Mini Hackathon 2025, and
-          Top 10 Finalist at ReviveNation CodeFest 2025 &mdash; active in open-source with 500+ LinkedIn connections and 400+ contributions on GitHub.
+          Top 10 Finalist at ReviveNation CodeFest 2025 &mdash; with 500+ LinkedIn connections, 42 public repositories, and 1,650+ contributions on GitHub in the past year.
         </p>
         <div class="github-stats">
-          <a href="https://github.com/SakithLiyanage" target="_blank" class="github-profile-link">
+          <a href="https://github.com/SakithLiyanage" target="_blank" rel="noopener noreferrer" class="github-profile-link">
             <i class="bx bxl-github"></i> github.com/SakithLiyanage
           </a>
           <div class="github-metrics">
             <div class="metric">
-              <span class="count">25+</span>
-              <span class="label">Repositories</span>
+              <span class="count">42</span>
+              <span class="label">Public Repositories</span>
             </div>
             <div class="metric">
-              <span class="count">400+</span>
-              <span class="label">Contributions</span>
+              <span class="count">1,650+</span>
+              <span class="label">Contributions (Past Year)</span>
+            </div>
+            <div class="metric">
+              <span class="count">2,700+</span>
+              <span class="label">Total Contributions</span>
             </div>
           </div>
         </div>
-        <div class="about-btn">
-          <button class="active">Main Skills</button>
-          <button>Experience</button>
-          <button>Certifications</button>
-          <button>Education</button>
-          <button>GitHub</button>
+        <div class="about-btn ide-tabs">
+          <button type="button" class="active"><i class="bx bx-code-curly"></i> skills.json</button>
+          <button type="button"><i class="bx bx-terminal"></i> experience.log</button>
+          <button type="button"><i class="bx bx-badge-check"></i> certs.yml</button>
+          <button type="button"><i class="bx bx-book-alt"></i> education.md</button>
+          <button type="button"><i class="bx bxl-github"></i> github.stat</button>
         </div>
         <div class="content-btn">
           <div class="content">
             <div class="text-box">
               <p>Programming Languages</p>
-              <span>Java, Kotlin, JavaScript (ES6+), TypeScript, Python, Dart, C, C++, SQL</span>
+              <span>Java, TypeScript, JavaScript (ES6+), C#, Kotlin, Python, Dart, C, C++, SQL</span>
             </div>
             <div class="text-box">
               <p>Frontend Development</p>
-              <span>React.js, Next.js, Vite, Tailwind CSS, Bootstrap, SASS, Framer Motion, HTML5, CSS3</span>
+              <span>React.js, Next.js, Vite, Tailwind CSS, Shadcn UI, Bootstrap, SASS, Framer Motion, HTML5, CSS3</span>
             </div>
             <div class="text-box">
               <p>Backend &amp; Cloud</p>
-              <span>Java Spring Boot, Node.js, Express, PostgreSQL, MongoDB, MySQL, RabbitMQ, Docker, Kubernetes, AWS</span>
+              <span>Java Spring Boot, ASP.NET Core (.NET 8), Node.js, Express, Prisma, PostgreSQL, MongoDB, MySQL, RabbitMQ, Redis, Docker, Kubernetes, AWS</span>
             </div>
             <div class="text-box">
               <p>Mobile Development</p>
-              <span>Flutter (Dart), Android Studio (Kotlin)</span>
+              <span>Flutter (Dart), Android Studio (Java / Kotlin)</span>
+            </div>
+            <div class="text-box">
+              <p>AI, Security &amp; Integrations</p>
+              <span>Google Gemini, Groq (Llama 3), OpenRouter, Tesseract.js OCR, OAuth 2.0 / OIDC, JWT, Google Maps API, PayHere, Stripe</span>
             </div>
             <div class="text-box">
               <p>Tools &amp; DevOps</p>
-              <span>Git, GitHub, Docker, Kubernetes, Postman, VS Code, DigitalOcean, PayHere, Stripe</span>
+              <span>Git, GitHub, Docker, Kubernetes, IIS, Postman, VS Code, Android Studio, DigitalOcean, Vercel</span>
             </div>
             <div class="text-box">
               <p>Soft Skills</p>
-              <span>Problem Solving, Agile Engineering, Cross-functional Teamwork, Clear Technical Communication</span>
+              <span>Technical Leadership, Problem Solving, Agile Engineering, Cross-functional Teamwork, Clear Technical Communication</span>
             </div>
           </div>
 
           <div class="content">
             <div class="text-box">
               <p>Software Engineer</p>
-              <span>Data Management Systems (Pvt) Ltd · Full-time (Hybrid) | Aug 2025 – Present · Colombo, Sri Lanka</span>
+              <span>Data Management Systems (Pvt) Ltd (Division 2) · Full-time (Hybrid) | Aug 2025 – Present · Colombo, Sri Lanka</span>
               <span style="display:block; margin-top: 6px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
                 Software Division &mdash; Architecting enterprise-grade software applications, engineering full-stack solutions, designing REST APIs, and maintaining robust system performance.
               </span>
@@ -385,6 +455,14 @@
             <div class="text-box">
               <p>Next.js: Creating and Hosting a Full-Stack Site</p>
               <span>LinkedIn Learning · Feb 2026</span>
+            </div>
+            <div class="text-box">
+              <p>AI/ML Engineer &ndash; Stage 1</p>
+              <span>Sri Lanka Institute of Information Technology (SLIIT)</span>
+            </div>
+            <div class="text-box">
+              <p>MongoDB Node.js Developer Path</p>
+              <span>MongoDB</span>
             </div>
             <div class="text-box">
               <p>JavaScript for Beginners Complete Course</p>
@@ -441,25 +519,23 @@
             </div>
             <div class="text-box">
               <p>Mahinda Rajapaksha College, Homagama</p>
-              <span>G.C.E. A/L – A2C1 (Business Studies, Accounting, IT) | G.C.E. O/L – A7 B2 | 2016 - 2022</span>
+              <span>G.C.E. A/L – A2C1 (Business Studies, Accounting, IT) | G.C.E. O/L – A7 B2 | 2016 - 2022<br>
+              Leadership: President, Commerce Society</span>
             </div>
           </div>
 
           <div class="content">
             <div class="text-box">
-              <p>Open Source Contributions</p>
-              <span>Active contributor to open source projects, focusing on web development tools and UI
-                components.</span>
+              <p>42 Public Repositories &amp; 1,650+ Yearly Contributions</p>
+              <span>Active across TypeScript, JavaScript, Java, C#, Kotlin, Dart, and Python with 2,700+ total GitHub contributions since 2023.</span>
             </div>
             <div class="text-box">
-              <p>Personal Projects</p>
-              <span>Developed and maintained multiple personal projects showcasing skills in React, Node.js, and
-                responsive design.</span>
+              <p>Enterprise, Cloud &amp; AI Systems</p>
+              <span>Built microservices, monorepos, and mobile-web platforms including Solvance, HEART (J26-SE-334), BizPilot AI, SynapseCare, and BuildMart Secure.</span>
             </div>
             <div class="text-box">
-              <p>Collaborative Development</p>
-              <span>Collaborated with other developers on GitHub through pull requests, code reviews, and issue
-                management.</span>
+              <p>Collaborative &amp; Open-Source Engineering</p>
+              <span>Led team projects, code reviews, security vulnerability remediations (25 CWE patches), and full-stack deployments on Vercel &amp; GitHub Pages.</span>
             </div>
           </div>
         </div>
@@ -473,9 +549,68 @@
   <!-- ==================== TECH SKILLS ==================== -->
   <section class="tech-section" id="tech-skills">
     <div class="main-text">
-      <div class="section-tag" style="justify-content: center; margin-bottom: 1rem;">Tech Stack</div>
+      <div class="section-tag" style="justify-content: center; margin-bottom: 1rem;">02 // SYSTEM_STACK</div>
       <h2 class="heading">Tools &amp; Technologies</h2>
       <span>Technologies I'm proficient with</span>
+    </div>
+
+    <div class="tech-marquee-wrap" aria-hidden="true">
+      <div class="marquee-row marquee-left">
+        <div class="marquee-track">
+          <span class="marquee-pill"><i class="bx bxl-react"></i> React 18</span>
+          <span class="marquee-pill"><i class="bx bx-layer"></i> Next.js</span>
+          <span class="marquee-pill"><i class="bx bxl-typescript"></i> TypeScript</span>
+          <span class="marquee-pill"><i class="bx bxl-spring-boot"></i> Spring Boot</span>
+          <span class="marquee-pill"><i class="bx bx-code-block"></i> ASP.NET Core</span>
+          <span class="marquee-pill"><i class="bx bxl-nodejs"></i> Node.js</span>
+          <span class="marquee-pill"><i class="bx bxl-postgresql"></i> PostgreSQL</span>
+          <span class="marquee-pill"><i class="bx bxl-mongodb"></i> MongoDB</span>
+          <span class="marquee-pill"><i class="bx bxl-docker"></i> Docker</span>
+          <span class="marquee-pill"><i class="bx bx-cube-alt"></i> Kubernetes</span>
+          <span class="marquee-pill"><i class="bx bxl-aws"></i> AWS</span>
+          <span class="marquee-pill"><i class="bx bxl-flutter"></i> Flutter</span>
+          <!-- Duplicate for seamless loop -->
+          <span class="marquee-pill"><i class="bx bxl-react"></i> React 18</span>
+          <span class="marquee-pill"><i class="bx bx-layer"></i> Next.js</span>
+          <span class="marquee-pill"><i class="bx bxl-typescript"></i> TypeScript</span>
+          <span class="marquee-pill"><i class="bx bxl-spring-boot"></i> Spring Boot</span>
+          <span class="marquee-pill"><i class="bx bx-code-block"></i> ASP.NET Core</span>
+          <span class="marquee-pill"><i class="bx bxl-nodejs"></i> Node.js</span>
+          <span class="marquee-pill"><i class="bx bxl-postgresql"></i> PostgreSQL</span>
+          <span class="marquee-pill"><i class="bx bxl-mongodb"></i> MongoDB</span>
+          <span class="marquee-pill"><i class="bx bxl-docker"></i> Docker</span>
+          <span class="marquee-pill"><i class="bx bx-cube-alt"></i> Kubernetes</span>
+          <span class="marquee-pill"><i class="bx bxl-aws"></i> AWS</span>
+          <span class="marquee-pill"><i class="bx bxl-flutter"></i> Flutter</span>
+        </div>
+      </div>
+      <div class="marquee-row marquee-right">
+        <div class="marquee-track">
+          <span class="marquee-pill"><i class="bx bxl-java"></i> Java</span>
+          <span class="marquee-pill"><i class="bx bx-code-curly"></i> Kotlin</span>
+          <span class="marquee-pill"><i class="bx bxl-tailwind-css"></i> Tailwind CSS</span>
+          <span class="marquee-pill"><i class="bx bx-network-chart"></i> RabbitMQ</span>
+          <span class="marquee-pill"><i class="bx bx-data"></i> Prisma ORM</span>
+          <span class="marquee-pill"><i class="bx bx-bot"></i> Gemini &amp; Groq AI</span>
+          <span class="marquee-pill"><i class="bx bx-shield-quarter"></i> OAuth 2.0 / OIDC</span>
+          <span class="marquee-pill"><i class="bx bxl-firebase"></i> Firebase</span>
+          <span class="marquee-pill"><i class="bx bxl-figma"></i> Figma</span>
+          <span class="marquee-pill"><i class="bx bxl-python"></i> Python</span>
+          <span class="marquee-pill"><i class="bx bxl-git"></i> Git &amp; CI/CD</span>
+          <!-- Duplicate for seamless loop -->
+          <span class="marquee-pill"><i class="bx bxl-java"></i> Java</span>
+          <span class="marquee-pill"><i class="bx bx-code-curly"></i> Kotlin</span>
+          <span class="marquee-pill"><i class="bx bxl-tailwind-css"></i> Tailwind CSS</span>
+          <span class="marquee-pill"><i class="bx bx-network-chart"></i> RabbitMQ</span>
+          <span class="marquee-pill"><i class="bx bx-data"></i> Prisma ORM</span>
+          <span class="marquee-pill"><i class="bx bx-bot"></i> Gemini &amp; Groq AI</span>
+          <span class="marquee-pill"><i class="bx bx-shield-quarter"></i> OAuth 2.0 / OIDC</span>
+          <span class="marquee-pill"><i class="bx bxl-firebase"></i> Firebase</span>
+          <span class="marquee-pill"><i class="bx bxl-figma"></i> Figma</span>
+          <span class="marquee-pill"><i class="bx bxl-python"></i> Python</span>
+          <span class="marquee-pill"><i class="bx bxl-git"></i> Git &amp; CI/CD</span>
+        </div>
+      </div>
     </div>
 
     <div class="tech-stack">
@@ -500,12 +635,15 @@
           <div class="tech-icons">
             <div class="tech-icon" data-tooltip="Java"><i class="bx bxl-java"></i></div>
             <div class="tech-icon" data-tooltip="Spring Boot"><i class="bx bxl-spring-boot"></i></div>
+            <div class="tech-icon" data-tooltip="C# / ASP.NET Core"><i class="bx bx-code-block"></i></div>
             <div class="tech-icon" data-tooltip="Node.js"><i class="bx bxl-nodejs"></i></div>
             <div class="tech-icon" data-tooltip="Express.js"><i class="bx bx-server"></i></div>
             <div class="tech-icon" data-tooltip="PostgreSQL"><i class="bx bxl-postgresql"></i></div>
             <div class="tech-icon" data-tooltip="MongoDB"><i class="bx bxl-mongodb"></i></div>
             <div class="tech-icon" data-tooltip="MySQL"><i class="bx bx-data"></i></div>
+            <div class="tech-icon" data-tooltip="RabbitMQ / Redis"><i class="bx bx-network-chart"></i></div>
             <div class="tech-icon" data-tooltip="Docker"><i class="bx bxl-docker"></i></div>
+            <div class="tech-icon" data-tooltip="Kubernetes"><i class="bx bx-cube-alt"></i></div>
             <div class="tech-icon" data-tooltip="AWS"><i class="bx bxl-aws"></i></div>
             <div class="tech-icon" data-tooltip="Python"><i class="bx bxl-python"></i></div>
           </div>
@@ -540,7 +678,7 @@
   <!-- ==================== SERVICES ==================== -->
   <section class="services" id="services">
     <div class="main-text">
-      <div class="section-tag" style="justify-content: center; margin-bottom: 1rem;">What I Do</div>
+      <div class="section-tag" style="justify-content: center; margin-bottom: 1rem;">03 // CAPABILITIES</div>
       <h2 class="heading">My Services</h2>
       <span>Explore a range of expert services tailored to enhance your digital
         presence. From captivating website design to user-centric UX/UI
@@ -549,55 +687,57 @@
 
     <div class="allServices">
       <div class="servicesItem">
+        <span class="svc-code">SVC_01</span>
         <div class="icon-services">
           <i class="bx bx-code-alt"></i>
           <span></span>
         </div>
         <h3>Web Development</h3>
         <p>
-          Specializing in web development, I craft dynamic websites with a
-          keen focus on functionality and seamless user experiences. From
-          responsive designs to robust backend solutions, each project
-          reflects my commitment to innovation.
+          Crafting dynamic, responsive, and high-performance full-stack web
+          applications using React, Next.js, TypeScript, Node.js, Java Spring
+          Boot, and ASP.NET Core.
         </p>
       </div>
       <div class="servicesItem">
+        <span class="svc-code">SVC_02</span>
         <div class="icon-services">
-          <i class="bx bx-pen"></i>
+          <i class="bx bx-server"></i>
           <span></span>
         </div>
-        <h3>Graphic Designing</h3>
+        <h3>Cloud &amp; Backend</h3>
         <p>
-          Passionate about visual storytelling, I specialize in graphic
-          design, crafting compelling visuals that leave a lasting impression.
-          From brand identities to marketing materials &mdash; making a lasting impact.
+          Architecting scalable microservices, secure REST APIs, event-driven
+          pipelines, and containerized deployments with PostgreSQL, MongoDB,
+          RabbitMQ, Docker, Kubernetes, and AWS.
         </p>
       </div>
 
       <div class="servicesItem">
+        <span class="svc-code">SVC_03</span>
+        <div class="icon-services">
+          <i class="bx bx-mobile-alt"></i>
+          <span></span>
+        </div>
+        <h3>Mobile App Development</h3>
+        <p>
+          Building smooth cross-platform Flutter (Dart) and native Android
+          (Kotlin/Java) applications integrated with geolocation, real-time
+          analytics, and AI-powered workflows.
+        </p>
+      </div>
+
+      <div class="servicesItem">
+        <span class="svc-code">SVC_04</span>
         <div class="icon-services">
           <i class="bx bx-desktop"></i>
           <span></span>
         </div>
-        <h3>UI / UX Design</h3>
+        <h3>UI/UX &amp; Brand Design</h3>
         <p>
-          Blending creativity with functionality, I excel in UI/UX design,
-          ensuring seamless and enjoyable user experiences. From intuitive
-          interfaces to user-centric designs, I craft solutions that harmonize
-          aesthetics and usability.
-        </p>
-      </div>
-
-      <div class="servicesItem">
-        <div class="icon-services">
-          <i class="bx bxs-party"></i>
-          <span></span>
-        </div>
-        <h3>Digital Marketing</h3>
-        <p>
-          Specializing in digital marketing, I drive success through strategic
-          solutions. From targeted campaigns to social media strategies, I
-          leverage data-driven insights for effective online visibility.
+          Harmonizing aesthetics and usability through intuitive Figma design
+          systems, interactive prototypes, graphic design, and cohesive brand
+          visual identities.
         </p>
       </div>
     </div>
@@ -617,27 +757,102 @@
   <!-- ==================== PORTFOLIO ==================== -->
   <section class="portfolio" id="portfolio">
     <div class="main-text">
-      <div class="section-tag" style="justify-content: center; margin-bottom: 1rem;">Selected Work</div>
+      <div class="section-tag" style="justify-content: center; margin-bottom: 1rem;">04 // SELECTED_WORK</div>
       <h2 class="heading">My Latest Projects</h2>
       <span>Explore a showcase of my recent full stack development projects,
         where frontend elegance meets backend robustness. Each project
         demonstrates my ability to create complete, scalable solutions with
         modern technologies.</span>
     </div>
-    <div class="fillter-buttons">
-      <button class="button mixitup-control-active" data-filter="all">
-        All Work
+    <div class="portfolio-toolbar">
+      <div class="project-search-wrap">
+        <i class="bx bx-search"></i>
+        <input type="search" id="projectSearch" placeholder="Search 38 projects by name, stack, or role (e.g. React, .NET, Flutter, AI)..." aria-label="Search projects" autocomplete="off" />
+        <button type="button" id="clearProjectSearch" class="clear-search-btn" aria-label="Clear search" hidden><i class="bx bx-x"></i></button>
+      </div>
+      <span class="project-count-label" id="projectCountLabel">Showing 9 of 38 projects</span>
+    </div>
+
+    <div class="fillter-buttons" id="portfolioFilters">
+      <button type="button" class="button active" data-filter="all">
+        All Work <span class="filter-count">38</span>
       </button>
-      <button class="button" data-filter=".web">Web Development</button>
-      <button class="button" data-filter=".branding">Branding Design</button>
-      <button class="button" data-filter=".mobile">
-        Mobile App Development
+      <button type="button" class="button" data-filter="web">
+        Web Development <span class="filter-count">0</span>
+      </button>
+      <button type="button" class="button" data-filter="ai-cloud">
+        AI, Cloud &amp; Security <span class="filter-count">0</span>
+      </button>
+      <button type="button" class="button" data-filter="mobile">
+        Mobile Apps <span class="filter-count">0</span>
+      </button>
+      <button type="button" class="button" data-filter="branding">
+        Branding <span class="filter-count">0</span>
       </button>
     </div>
 
-    <div class="portfolio-gallery">
+    <div class="portfolio-gallery" id="portfolioGallery">
 
-      <div class="portfolio-box mix web">
+      <div class="portfolio-box mix web mobile ai-cloud">
+        <div class="portfolio-img">
+          <img src="img/solvance.jpg" alt="Solvance Smart Solar Microgrid Trading System" loading="lazy"
+            decoding="async" />
+        </div>
+        <div class="portfolio-content">
+          <h3>Solvance &mdash; Smart Solar Microgrid Trading System</h3>
+          <p>
+            Enterprise energy trading ecosystem featuring an ASP.NET Core backend API, React + Vite web portal, and native Android Google Maps station explorer with hourly slot reservations &amp; QR verification.
+          </p>
+          <p class="portfolio-keywords">
+            Stack: C# ASP.NET Core, React, Vite, Android (Java), MongoDB, Google Maps | Role: Group Leader &amp; Full-Stack Engineer
+          </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/Solvance-Smart-SolarMicrogrid-Trading-System" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+            <a href="https://youtu.be/ESs88kLkrvk" target="_blank" rel="noopener noreferrer" class="portfolio-link live"><i class="bx bx-play-circle"></i> Demo Video</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-box mix web ai-cloud">
+        <div class="portfolio-img">
+          <img src="img/heart-ui.png" alt="HEART Human Behavior-Aware Robustness Testing Framework UI" loading="lazy"
+            decoding="async" />
+        </div>
+        <div class="portfolio-content">
+          <h3>HEART &mdash; Mobile Robustness Testing Framework</h3>
+          <p>
+            Final-year research platform (J26-SE-334) detecting non-crash mobile GUI defects under environmental &amp; human stress using on-device quantized Vision-Language Models (Qwen2-VL) and Sentence-BERT self-healing locators.
+          </p>
+          <p class="portfolio-keywords">
+            Stack: React 18, Vite, Three.js, Recharts, Qwen2-VL, Sentence-BERT | ID: J26-SE-334
+          </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/J26-SE-334" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+            <a href="https://heart-sand.vercel.app" target="_blank" rel="noopener noreferrer" class="portfolio-link live"><i class="bx bx-link-external"></i> Live Prototype</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-box mix web mobile ai-cloud">
+        <div class="portfolio-visual">
+          <i class="bx bx-bot"></i>
+          <span>AI Business OS Monorepo</span>
+        </div>
+        <div class="portfolio-content">
+          <h3>BizPilot AI &mdash; SME Business Operating System</h3>
+          <p>
+            Multi-platform AI business OS automating WhatsApp customer interactions (Groq Llama 3 + WaAPI), inventory, dynamic PDF quotations, Tesseract.js OCR invoice parsing, and a Flutter companion app.
+          </p>
+          <p class="portfolio-keywords">
+            Stack: TypeScript, Node.js, Express, Prisma, PostgreSQL, React, Shadcn UI, Flutter, Groq AI
+          </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/BizPilot-Project" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-box mix web ai-cloud">
         <div class="portfolio-img">
           <img src="img/synapsecare.jpg" alt="SynapseCare cloud-native healthcare platform UI" loading="lazy"
             decoding="async" />
@@ -650,10 +865,13 @@
           <p class="portfolio-keywords">
             Stack: Java Spring Boot, PostgreSQL 15, RabbitMQ, Docker, Kubernetes | Roles: Microservices &amp; Backend Engineer
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/SynapseCare-Cloud-Native-Healthcare-Platform" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
-      <div class="portfolio-box mix web">
+      <div class="portfolio-box mix web ai-cloud">
         <div class="portfolio-img">
           <img src="img/trustfund.jpg" alt="TrustFund NGO donation and transparency tracker UI" loading="lazy"
             decoding="async" />
@@ -666,10 +884,13 @@
           <p class="portfolio-keywords">
             Stack: React, Vite, Tailwind CSS, Node.js (Express v5), MongoDB, Mapbox, PayHere, Gemini AI | Roles: Full Stack Lead
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/NGO-donation-tracker" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
-      <div class="portfolio-box mix web">
+      <div class="portfolio-box mix web ai-cloud">
         <div class="portfolio-img">
           <img src="img/novapos.jpg" alt="NovaPOS AI-powered point of sale system UI" loading="lazy"
             decoding="async" />
@@ -682,10 +903,13 @@
           <p class="portfolio-keywords">
             Stack: React 18, Vite, Tailwind CSS, Node.js, Express, MongoDB, Docker | Roles: Full Stack Developer
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/NovaPOS_POS_System" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
-      <div class="portfolio-box mix mobile">
+      <div class="portfolio-box mix mobile ai-cloud">
         <div class="portfolio-img">
           <img src="img/biznest.jpg" alt="BizNest entrepreneurial toolkit mobile app UI" loading="lazy"
             decoding="async" />
@@ -698,6 +922,30 @@
           <p class="portfolio-keywords">
             Stack: Flutter, Dart, OpenRouter API, Provider | Roles: Mobile Engineer &amp; UI Designer
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/BizNest-Entrepreneurial-Toolkit-Mobile-App" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-box mix web ai-cloud">
+        <div class="portfolio-img">
+          <img src="img/buildmart.png" alt="BuildMart auction and procurement platform UI" loading="lazy"
+            decoding="async" />
+        </div>
+        <div class="portfolio-content">
+          <h3>BuildMart &amp; BuildMart Secure &mdash; Construction Marketplace</h3>
+          <p>
+            Scalable MERN auction &amp; procurement platform for the construction industry, hardened in <strong>BuildMart-Secure</strong> by remediating 25 distinct CWE vulnerabilities (NoSQLi, IDOR, mass assignment, stored XSS) and adding Google OAuth 2.0 / OIDC.
+          </p>
+          <p class="portfolio-keywords">
+            Stack: MongoDB, Express, React, Tailwind CSS, OAuth 2.0, Helmet/CSP
+          </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/BuildMart-Secure" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bx-shield-quarter"></i> Secure Repo</a>
+            <a href="https://github.com/SakithLiyanage/BuildMart" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+            <a href="https://buildmart-system.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link live"><i class="bx bx-link-external"></i> Live</a>
+          </div>
         </div>
       </div>
 
@@ -707,14 +955,16 @@
             decoding="async" />
         </div>
         <div class="portfolio-content">
-          <h3>UrbanCare - Smart Healthcare Management System</h3>
+          <h3>UrbanCare &mdash; Smart Healthcare Management System</h3>
           <p>
             A comprehensive Smart Healthcare Management System developed as a CSSE module group project.
           </p>
           <p class="portfolio-keywords">
-            Roles: Backend Lead, API Engineer | Tags: Sakith SLIIT group
-            project, Sri Lankan health tech platform
+            Roles: Backend Lead, API Engineer | Sri Lankan Health Tech Platform
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/UrbanCare_Hospital_System" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -729,6 +979,10 @@
             Ripple Studio is a full-stack web platform connecting musicians with recording studios through real-time
             discovery, booking, and payments.
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/Ripple-Studio-Booking-Platform" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+            <a href="https://ripple-studio-booking-platform-ten.vercel.app" target="_blank" rel="noopener noreferrer" class="portfolio-link live"><i class="bx bx-link-external"></i> Live</a>
+          </div>
         </div>
       </div>
 
@@ -738,28 +992,35 @@
             decoding="async" />
         </div>
         <div class="portfolio-content">
-          <h3>e-Grama digital certificate issuance and management platform for Sri Lanka</h3>
+          <h3>e-Grama &mdash; Digital Certificate Issuance Platform</h3>
           <p>
-            e-Grama is a Proof-of-Concept platform built for the ReviveNation Codefest Competition to modernize Sri
-            Lanka's certificate issuance process.
+            Top 10 Finalist Proof-of-Concept built for ReviveNation CodeFest 2025 to modernize Sri
+            Lanka's Grama Niladhari certificate issuance and division assignment process.
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/e-Grama-digital-certificate-issuance-and-management-platform-for-Sri-Lanka" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
-      <div class="portfolio-box mix web">
+      <div class="portfolio-box mix web ai-cloud">
         <div class="portfolio-img">
           <img src="img/langbridge.png" alt="LangBridge language translator web app" loading="lazy" decoding="async" />
         </div>
         <div class="portfolio-content">
           <h3>LangBridge Language Translator</h3>
           <p>
-            A full-stack web app for translating Sinhala, English, Tamil with features like voice input, quizzes,
+            A full-stack web app for translating Sinhala, English, and Tamil with features like voice input, quizzes,
             community, and AI examples.
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/LangBridge-Language-Translator" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+            <a href="https://langbridge-language-translator.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link live"><i class="bx bx-link-external"></i> Live</a>
+          </div>
         </div>
       </div>
 
-      <div class="portfolio-box mix web">
+      <div class="portfolio-box mix web ai-cloud">
         <div class="portfolio-img">
           <img src="img/creativestudio.png" alt="CreativeForge creative studio AI tools dashboard" loading="lazy"
             decoding="async" />
@@ -768,8 +1029,12 @@
           <h3>CreativeForge Creative Studio</h3>
           <p>
             CreativeForge streamlines media tasks with AI tools for documents, images, QR codes, URLs, email, chatbot,
-            and real-time dashboard. Built with MERN Stacks and Tailwind CSS.
+            and real-time dashboard. Built with MERN Stack and Tailwind CSS.
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/CreativeForge-Creative-Studio" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+            <a href="https://creative-forge-creative-studio.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link live"><i class="bx bx-link-external"></i> Live</a>
+          </div>
         </div>
       </div>
 
@@ -783,20 +1048,44 @@
             Developed a MERN-based Learning Management System with role-based access, enabling course management,
             student submissions, real-time notifications, grading logic, and a modern, responsive interface.
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/MERN-LMS-Project" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
       <div class="portfolio-box mix web">
         <div class="portfolio-img">
-          <img src="img/buildmart.png" alt="BuildMart auction and procurement platform UI" loading="lazy"
-            decoding="async" />
+          <img src="img/yieldcore.png" alt="YieldCore Systems Data Science Agency website" loading="lazy" decoding="async" />
         </div>
         <div class="portfolio-content">
-          <h3>BuildMart &mdash; Auction and procurement system for construction Industry</h3>
+          <h3>YieldCore Systems &mdash; Data Science Agency</h3>
           <p>
-            Designed a scalable auction and procurement platform with user/job management features. Built with MERN
-            Stacks and Tailwind CSS.
+            Modern, futuristic corporate web platform built with React 18, Tailwind CSS, Framer Motion, and Headless UI featuring interactive case studies, service cards, and blog views.
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/YieldCore-Systems-Data-Science-Agency-Website" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+            <a href="https://yield-core-systems-data-science-age.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link live"><i class="bx bx-link-external"></i> Live</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-box mix web">
+        <div class="portfolio-visual">
+          <i class="bx bx-music"></i>
+          <span>Music Studio Booking</span>
+        </div>
+        <div class="portfolio-content">
+          <h3>TuneLink &mdash; Music Booking Platform</h3>
+          <p>
+            Full-stack music booking platform connecting artists, recording studios, and clients with genre/location filtering, session scheduling, reviews, and role-based dashboards.
+          </p>
+          <p class="portfolio-keywords">
+            Stack: React 18, Tailwind CSS, Framer Motion, Node.js, Express, MongoDB, JWT
+          </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/TuneLink_Music_Studio_Booking_WebApp" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -807,9 +1096,120 @@
         <div class="portfolio-content">
           <h3>TradeSphere Marketplace</h3>
           <p>
-            A Full-Stack MERN E-Commerce Platform for Seamless Buying &amp; Selling. Built with MERN Stacks and Tailwind
+            A Full-Stack MERN E-Commerce Platform for Seamless Buying &amp; Selling. Built with MERN Stack and Tailwind
             CSS.
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/TradeSphere_Marketplace" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+            <a href="https://tradesphere-backend.vercel.app" target="_blank" rel="noopener noreferrer" class="portfolio-link live"><i class="bx bx-link-external"></i> Live</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-box mix web">
+        <div class="portfolio-visual">
+          <i class="bx bx-id-card"></i>
+          <span>.NET 8 &amp; PostgreSQL</span>
+        </div>
+        <div class="portfolio-content">
+          <h3>Employee Management System (.NET 8)</h3>
+          <p>
+            Enterprise CRUD Employee Management System built with ASP.NET Core Razor Pages (.NET 8, C# 12), Entity Framework Core, PostgreSQL, Bootstrap 5, and jQuery validation.
+          </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/EmployeeManagementSystem_CRUD_ASP.Net-PostgreSQL-jQuery" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-box mix web">
+        <div class="portfolio-img">
+          <img src="img/oillamp.png" alt="Smart Board Opening Ceremony Interactive Oil Lamp web app" loading="lazy" decoding="async" />
+        </div>
+        <div class="portfolio-content">
+          <h3>Smart Board Opening Ceremony &mdash; Oil Lamp</h3>
+          <p>
+            Interactive ceremonial web application for Mahinda Rajapaksha College Homagama featuring 18 progressive animated oil lamps optimized for smart board displays.
+          </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/Smart_Board_Opening_Ceremony_OilLamp" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+            <a href="https://sakithliyanage.github.io/Smart_Board_Opening_Ceremony_OilLamp/" target="_blank" rel="noopener noreferrer" class="portfolio-link live"><i class="bx bx-link-external"></i> Live</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-box mix web">
+        <div class="portfolio-img">
+          <img src="img/lankaspire.jpg" alt="LankaSpire Cinnamon Shop e-commerce mockup" loading="lazy" decoding="async" />
+        </div>
+        <div class="portfolio-content">
+          <h3>LankaSpire &mdash; Cinnamon E-Commerce</h3>
+          <p>
+            Responsive front-end e-commerce storefront showcasing authentic Sri Lankan cinnamon products with clean SCSS styling and product discovery.
+          </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/lankaspire-web-project" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-box mix mobile">
+        <div class="portfolio-img">
+          <img src="img/cashwire.png" alt="CashWire financial tracking mobile app" loading="lazy" decoding="async" />
+        </div>
+        <div class="portfolio-content">
+          <h3>CashWire &mdash; Smart Money Management</h3>
+          <p>
+            Kotlin Android finance app for tracking LKR income &amp; expenses, smart category budgeting, spending analysis charts, and savings goals.
+          </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/CashWire_Financial_Tracking_Mobile_App" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-box mix mobile">
+        <div class="portfolio-img">
+          <img src="img/swiftride.png" alt="SwiftRide transport mobile app" loading="lazy" decoding="async" />
+        </div>
+        <div class="portfolio-content">
+          <h3>SwiftRide &mdash; Mobile Transport App</h3>
+          <p>
+            Native Kotlin Android application featuring ride onboarding, authentication, booking workflows, and user profile management.
+          </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/SwiftRide_Mobile_App" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-box mix web">
+        <div class="portfolio-img">
+          <img src="img/pixelite.jpg" alt="Pixelite photography portfolio and booking website" loading="lazy" decoding="async" />
+        </div>
+        <div class="portfolio-content">
+          <h3>Pixelite &mdash; Photography Studio Platform</h3>
+          <p>
+            Multi-page photography showcase and booking website featuring service galleries, interactive slideshows, and booking workflows.
+          </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/Pixelite-Web-Project" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-box mix web">
+        <div class="portfolio-img">
+          <img src="img/commercewiki.png" alt="SL Commerce Wiki A/L commerce learning platform" loading="lazy" decoding="async" />
+        </div>
+        <div class="portfolio-content">
+          <h3>SL Commerce Wiki &mdash; Learning Platform</h3>
+          <p>
+            Open-source educational portal offering Sri Lankan G.C.E. A/L Commerce stream lessons and past papers across Accounting, Business Studies, and Economics.
+          </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/slcommercewiki" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -824,6 +1224,9 @@
             cutting-edge technologies to deliver a responsive, engaging user
             experience.
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/ConnectHub-Social-Media-App" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -834,10 +1237,13 @@
         <div class="portfolio-content">
           <h3>Eventix Event Ticket Booking Mobile App</h3>
           <p>
-            Eventix is a sleek, user-friendly mobile application designed to
+            Eventix is a sleek, user-friendly Kotlin mobile application designed to
             simplify how you discover, book, and manage tickets for a wide
             range of events.
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/Eventix_Mobile_App" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -851,6 +1257,9 @@
             FinFlow, a comprehensive financial tracking mobile application
             developed entirely in Kotlin to help users take control of their finances.
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/FinFlow-Financial-Tracking-Mobile-App" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -864,6 +1273,9 @@
             Built a Java-based music product catalog system with admin panel, search functionality, and payment
             simulation. Technologies: Java, SQL, Bootstrap.
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/ToneGallery_Java" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -877,6 +1289,9 @@
             Combined e-commerce and auction concepts in an online platform for artists and buyers. Technologies: PHP,
             MySQL, JavaScript.
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/GalleryGavel-Web-Project" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -890,6 +1305,9 @@
             Revamped VN Sports Dressings site with dynamic design and
             innovative features, embodying the brand's essence in sports fashion.
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/VN-Sports-New-Web-Project" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -903,6 +1321,9 @@
             Stepping into innovation, the Orbiter Shoes project showcases a
             fusion of cutting-edge design, comfort, and style in footwear fashion.
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/Orbiter-Shoes-Website-Project" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -916,6 +1337,9 @@
             Revolutionizing the shopping experience, Rapid Cart combines sleek
             design with seamless functionality.
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/Rapid-Cart-Web-Project" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -943,6 +1367,9 @@
             Elevating app exploration, Appdiscover.io showcases a seamless
             platform that simplifies app discovery.
           </p>
+          <div class="portfolio-links">
+            <a href="https://github.com/SakithLiyanage/appdiscover.github.io" target="_blank" rel="noopener noreferrer" class="portfolio-link"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -998,6 +1425,19 @@
 
     </div>
 
+    <div class="portfolio-empty" id="portfolioEmpty" hidden>
+      <i class="bx bx-folder-open"></i>
+      <p>No projects matched your search.</p>
+      <button type="button" class="btn btn-outline" id="resetPortfolioFilters">Reset Filters</button>
+    </div>
+
+    <div class="portfolio-toggle-wrap" id="portfolioToggleWrap">
+      <button type="button" class="btn btn-outline" id="toggleAllProjects">
+        <span>Show All 38 Projects</span>
+        <i class="bx bx-chevron-down"></i>
+      </button>
+    </div>
+
     <div class="github-activity">
       <h3>My GitHub Contributions</h3>
       <div class="github-chart">
@@ -1022,7 +1462,7 @@
 
   <section class="awards-section" id="awards">
     <div class="main-text">
-      <div class="section-tag" style="justify-content: center; margin-bottom: 1rem;">Recognition</div>
+      <div class="section-tag" style="justify-content: center; margin-bottom: 1rem;">05 // RECOGNITION</div>
       <h2 class="heading">Awards &amp; Achievements</h2>
       <span>Recognition for excellence in academics and competitions</span>
     </div>
@@ -1063,7 +1503,7 @@
   <!-- ==================== CONTACT ==================== -->
   <section class="down-box" id="contact">
     <div class="main-text">
-      <div class="section-tag" style="justify-content: center; margin-bottom: 1rem;">Let's Talk</div>
+      <div class="section-tag" style="justify-content: center; margin-bottom: 1rem;">06 // CONNECT</div>
       <h2 class="heading">Get In Touch</h2>
       <span>Let's build something amazing together</span>
     </div>
@@ -1089,6 +1529,9 @@
               <a href="mailto:sakithchanlaka2004@gmail.com">sakithchanlaka2004@gmail.com</a>
             </p>
           </div>
+          <button type="button" class="copy-btn" data-copy="sakithchanlaka2004@gmail.com" aria-label="Copy email address" title="Copy email">
+            <i class="bx bx-copy"></i>
+          </button>
         </div>
 
         <div class="contact-info-card">
@@ -1099,6 +1542,9 @@
             <h3>Call Me</h3>
             <p><a href="tel:+94769092755">+94 76 909 2755</a></p>
           </div>
+          <button type="button" class="copy-btn" data-copy="+94769092755" aria-label="Copy phone number" title="Copy phone number">
+            <i class="bx bx-copy"></i>
+          </button>
         </div>
 
         <div class="social-contact">
@@ -1120,31 +1566,31 @@
         <form action="https://formsubmit.co/sakithchanlaka2004@gmail.com" method="POST" class="modern-form">
           <div class="form-group">
             <div class="input-group">
-              <input type="text" name="fname" required autocomplete="off" />
+              <input type="text" id="fname" name="fname" required autocomplete="off" />
               <label for="fname">First Name</label>
               <span class="highlight"></span>
             </div>
             <div class="input-group">
-              <input type="text" name="lname" required autocomplete="off" />
+              <input type="text" id="lname" name="lname" required autocomplete="off" />
               <label for="lname">Last Name</label>
               <span class="highlight"></span>
             </div>
           </div>
 
           <div class="input-group full-width">
-            <input type="email" name="email" required autocomplete="off" />
+            <input type="email" id="email" name="email" required autocomplete="off" />
             <label for="email">Email Address</label>
             <span class="highlight"></span>
           </div>
 
           <div class="input-group full-width">
-            <input type="text" name="_subject" required autocomplete="off" />
+            <input type="text" id="_subject" name="_subject" required autocomplete="off" />
             <label for="_subject">Subject</label>
             <span class="highlight"></span>
           </div>
 
           <div class="input-group full-width">
-            <textarea name="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="5" required></textarea>
             <label for="message">Your Message</label>
             <span class="highlight"></span>
           </div>
@@ -1162,9 +1608,16 @@
 
   <footer>
     <div class="footer-content">
+      <div class="ide-status-bar">
+        <span class="ide-pill ide-branch"><i class="bx bx-git-branch"></i> main</span>
+        <span class="ide-pill"><i class="bx bx-check-double"></i> 0 errors</span>
+        <span class="ide-pill">UTF-8</span>
+        <span class="ide-pill">Colombo, LK &middot; <span id="liveClock">--:--</span></span>
+        <span class="ide-pill">v4.0</span>
+      </div>
       <p>
-        Copyright &copy; 2026 Creative Web Solution By
-        <span>Sakith Liyanage</span> | Version 3.0 || All Rights Reserved.
+        Copyright &copy; 2026 Engineered by
+        <span>&lt;Sakith.dev /&gt;</span> &middot; All Rights Reserved.
       </p>
       <div class="footer-social">
         <a href="https://github.com/SakithLiyanage" target="_blank"><i class="bx bxl-github"></i></a>
@@ -1257,12 +1710,41 @@
     </div>
   </div>
 
-  <!-- scroll reveal  -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <!-- mixitup cdn js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+  <!-- ==================== COMMAND PALETTE MODAL ==================== -->
+  <div class="cmd-overlay" id="cmdPalette" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Quick command palette">
+    <div class="cmd-dialog">
+      <div class="cmd-input-row">
+        <i class="bx bx-search"></i>
+        <input type="text" id="cmdInput" placeholder="Type a command, section, or project name..." autocomplete="off" />
+        <kbd>ESC</kbd>
+      </div>
+      <div class="cmd-results" id="cmdResults"></div>
+      <div class="cmd-footer">
+        <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> Navigate</span>
+        <span><kbd>Enter</kbd> Select</span>
+        <span><kbd>Esc</kbd> Close</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PROJECT QUICK-VIEW MODAL ==================== -->
+  <div class="pmodal-overlay" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pmodalTitle">
+    <div class="pmodal-dialog">
+      <button type="button" class="pmodal-close" id="pmodalClose" aria-label="Close project details"><i class="bx bx-x"></i></button>
+      <div class="pmodal-media" id="pmodalMedia"></div>
+      <div class="pmodal-body">
+        <div class="pmodal-tags" id="pmodalTags"></div>
+        <h3 id="pmodalTitle"></h3>
+        <p class="pmodal-desc" id="pmodalDesc"></p>
+        <div class="pmodal-stack" id="pmodalStack"></div>
+        <div class="pmodal-actions" id="pmodalActions"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="sa-toast" id="saToast" role="status" aria-live="polite"></div>
+
   <script src="script.js"></script>
   <!-- Sakith Personal Assistant -->
   <script src="assistant.js"></script>
